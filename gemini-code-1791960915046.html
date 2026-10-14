@@ -1,0 +1,1575 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Đề Ôn Tập & Kiểm Tra Tiếng Anh (43 Câu) - Ms Lê Hằng English</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Quicksand:wght@600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary-purple: #7952B3;
+      --primary-coral: #FF5E62;
+      --primary-yellow: #FFD166;
+      --primary-cyan: #06D6A0;
+      --accent-blue: #0984E3;
+      --correct-green: #00BA66;
+      --correct-bg: #E8F8F0;
+      --wrong-red: #FA5252;
+      --wrong-bg: #FFEAEA;
+      --card-bg: #FFFFFF;
+      --text-main: #2D3436;
+      --text-muted: #636E72;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Nunito', 'Quicksand', sans-serif;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    body {
+      min-height: 100vh;
+      background: linear-gradient(180deg, #FFEFBA 0%, #FFDFBA 8%, #E3F2FD 35%, #CBE3F7 70%, #A0C4E2 100%);
+      background-attachment: fixed;
+      position: relative;
+      overflow-x: hidden;
+      color: var(--text-main);
+      padding-bottom: 120px;
+    }
+
+    /* Ambient Skyline & Road Decorations */
+    .city-skyline {
+      position: fixed;
+      bottom: 45px;
+      left: 0;
+      width: 100%;
+      height: 120px;
+      pointer-events: none;
+      z-index: 0;
+      opacity: 0.32;
+      background-repeat: repeat-x;
+      background-position: bottom;
+      background-size: 400px 120px;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 120' width='400' height='120'%3E%3Cpath fill='%236C8EB5' d='M0,120 L0,60 L20,60 L20,30 L50,30 L50,120 L70,120 L70,45 L100,45 L100,120 L130,120 L130,15 L160,15 L160,120 L190,120 L190,50 L220,50 L220,120 L250,120 L250,25 L280,25 L280,120 L310,120 L310,40 L340,40 L340,120 L370,120 L370,55 L400,55 L400,120 Z'/%3E%3C/svg%3E");
+    }
+
+    .bottom-road {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 46px;
+      background: #4A4A4A;
+      border-top: 6px solid #00BA66;
+      z-index: 1;
+      pointer-events: none;
+      display: flex;
+      align-items: center;
+      box-shadow: 0 -4px 12px rgba(0,0,0,0.15);
+    }
+    .road-curb {
+      position: absolute;
+      top: -12px;
+      left: 0;
+      width: 100%;
+      height: 6px;
+      background: repeating-linear-gradient(90deg, #FF4757 0px, #FF4757 24px, #FFFFFF 24px, #FFFFFF 48px);
+    }
+    .road-lines {
+      width: 100%;
+      height: 6px;
+      background: repeating-linear-gradient(90deg, #FFFFFF 0px, #FFFFFF 35px, transparent 35px, transparent 70px);
+      opacity: 0.85;
+    }
+
+    /* Floating Clouds */
+    .bg-elements {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 0;
+      overflow: hidden;
+    }
+    .floating-cloud {
+      position: absolute;
+      opacity: 0.45;
+      animation: floatCloud 25s linear infinite;
+    }
+    @keyframes floatCloud {
+      0% { transform: translateX(-150px); }
+      100% { transform: translateX(110vw); }
+    }
+
+    /* Main Container */
+    .app-container {
+      position: relative;
+      z-index: 2;
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 16px 14px;
+    }
+
+    /* Top Compact Teacher Announcement Banner */
+    .top-announcement {
+      background: #FFFFFF;
+      border-radius: 30px;
+      padding: 8px 18px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+      margin-bottom: 12px;
+      border: 1.5px solid #FFDEE9;
+    }
+    .announcement-text {
+      font-size: 0.92rem;
+      font-weight: 800;
+      color: #333;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .teacher-badge {
+      background: linear-gradient(135deg, #FF6B6B, #FF8E53);
+      color: #FFF;
+      padding: 3px 12px;
+      border-radius: 18px;
+      font-size: 0.82rem;
+      font-weight: 900;
+      letter-spacing: 0.3px;
+    }
+
+    /* Header Unit Banner */
+    .unit-hero-card {
+      background: #FFFFFF;
+      border-radius: 28px;
+      padding: 22px 24px;
+      margin-bottom: 20px;
+      box-shadow: 0 8px 24px rgba(116, 185, 255, 0.18);
+      border: 2px solid #E3F2FD;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      position: relative;
+      overflow: hidden;
+    }
+    .unit-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: linear-gradient(90deg, #0984E3, #00CEC9);
+      color: #FFFFFF;
+      font-weight: 800;
+      font-size: 0.82rem;
+      padding: 5px 14px;
+      border-radius: 20px;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .unit-title {
+      font-size: 1.65rem;
+      font-weight: 900;
+      color: #2D3436;
+      line-height: 1.25;
+      margin-bottom: 6px;
+    }
+    .unit-subtitle {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: #636E72;
+    }
+    .unit-icon-box {
+      width: 90px;
+      height: 90px;
+      flex-shrink: 0;
+      border-radius: 24px;
+      background: linear-gradient(135deg, #E0F7FA, #FFF9C4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3rem;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.06);
+      border: 2px solid #FFFFFF;
+    }
+
+    /* Top Sticky Stats Bar */
+    .top-stats-bar {
+      position: sticky;
+      top: 10px;
+      z-index: 100;
+      background: rgba(255, 255, 255, 0.97);
+      backdrop-filter: blur(10px);
+      border-radius: 25px;
+      padding: 10px 18px;
+      margin-bottom: 18px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+      border: 2px solid #FFF0F5;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 15px;
+    }
+    .pill-counter-left {
+      background: #FF5E62;
+      color: #FFF;
+      font-weight: 900;
+      font-size: 0.95rem;
+      padding: 5px 14px;
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      box-shadow: 0 3px 0 #D63031;
+    }
+    .bar-track {
+      flex: 1;
+      height: 16px;
+      background: #EBF3FA;
+      border-radius: 12px;
+      overflow: hidden;
+      position: relative;
+      border: 2px solid #E1EDF8;
+    }
+    .bar-fill {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, #FDCB6E, #00D26A);
+      border-radius: 10px;
+      transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .pill-counter-right {
+      background: #00D26A;
+      color: #FFF;
+      font-weight: 900;
+      font-size: 0.95rem;
+      padding: 5px 14px;
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      box-shadow: 0 3px 0 #00A853;
+    }
+
+    /* Urgent Reminder Card */
+    .warning-box {
+      background: #FFF9E6;
+      border: 3px dashed #FDCB6E;
+      border-left: 8px solid #F39C12;
+      border-radius: 20px;
+      padding: 16px 20px;
+      margin-bottom: 24px;
+      box-shadow: 0 6px 18px rgba(243, 156, 18, 0.12);
+    }
+    .warning-title {
+      font-size: 1.05rem;
+      font-weight: 900;
+      color: #D35400;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 6px;
+      text-transform: uppercase;
+    }
+    .warning-text {
+      font-size: 0.95rem;
+      color: #4A3E1F;
+      line-height: 1.55;
+      font-weight: 700;
+    }
+    .warning-subtext {
+      margin-top: 6px;
+      font-size: 0.88rem;
+      color: #C0392B;
+      font-weight: 800;
+    }
+
+    /* READING PASSAGE BLOCK */
+    .reading-passage-card {
+      background: #FFFDF8;
+      border: 3px solid #FDCB6E;
+      border-radius: 26px;
+      padding: 24px 26px;
+      margin-bottom: 24px;
+      box-shadow: 0 10px 28px rgba(253, 203, 110, 0.25);
+      position: relative;
+    }
+    .passage-header-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 12px;
+      padding-bottom: 10px;
+      border-bottom: 2px dashed #F1C40F;
+    }
+    .passage-title-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 1.25rem;
+      font-weight: 900;
+      color: #D35400;
+    }
+    .passage-scope-badge {
+      background: #F39C12;
+      color: #FFF;
+      font-size: 0.82rem;
+      font-weight: 900;
+      padding: 4px 14px;
+      border-radius: 14px;
+      box-shadow: 0 2px 0 #D35400;
+    }
+    .passage-intro-text {
+      font-size: 0.98rem;
+      font-weight: 800;
+      color: #4B4B4B;
+      margin-bottom: 14px;
+      font-style: italic;
+    }
+    .passage-blank {
+      display: inline-block;
+      min-width: 68px;
+      padding: 1px 8px;
+      margin: 0 4px;
+      background: #FFF3CD;
+      border: 1.5px dashed #F39C12;
+      border-radius: 8px;
+      font-weight: 900;
+      color: #D35400;
+      text-align: center;
+    }
+    .passage-prompt-banner {
+      margin-top: 16px;
+      background: linear-gradient(90deg, #0984E3, #00CEC9);
+      color: #FFF;
+      padding: 10px 16px;
+      border-radius: 14px;
+      font-weight: 800;
+      font-size: 0.95rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    /* Embedded passage toggle inside question cards */
+    .btn-toggle-passage {
+      background: #EDF2F7;
+      color: #2B6CB0;
+      border: 1.5px solid #CBD5E0;
+      border-radius: 12px;
+      padding: 6px 14px;
+      font-size: 0.85rem;
+      font-weight: 800;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 14px;
+      transition: all 0.2s ease;
+    }
+    .btn-toggle-passage:hover {
+      background: #E2E8F0;
+      border-color: #0984E3;
+      color: #0984E3;
+    }
+    .collapse-passage-box {
+      display: none;
+      background: #FFFDF9;
+      border: 2px dashed #CBD5E0;
+      border-radius: 16px;
+      padding: 14px 16px;
+      margin-bottom: 16px;
+      font-size: 0.96rem;
+      line-height: 1.7;
+    }
+
+    /* Quiz Card */
+    .quiz-card {
+      background: #FFFFFF;
+      border-radius: 26px;
+      padding: 24px;
+      margin-bottom: 28px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+      border: 3px solid #F0F4F8;
+      position: relative;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+    .quiz-card:hover {
+      box-shadow: 0 14px 38px rgba(116, 185, 255, 0.2);
+    }
+    .card-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 14px;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .q-number-pill {
+      background: #0984E3;
+      color: #FFFFFF;
+      font-weight: 900;
+      font-size: 0.9rem;
+      padding: 5px 14px;
+      border-radius: 20px;
+      box-shadow: 0 3px 0 #0767B1;
+    }
+    .q-tag-pill {
+      background: #FFF3E0;
+      color: #E65100;
+      font-weight: 800;
+      font-size: 0.82rem;
+      padding: 4px 12px;
+      border-radius: 16px;
+      border: 1px solid #FFE0B2;
+    }
+    .q-text {
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: #2D3436;
+      line-height: 1.55;
+      margin-bottom: 18px;
+    }
+    .q-text u, .opt-text u {
+      color: #FF3838;
+      font-weight: 900;
+      text-decoration-thickness: 3px;
+      text-underline-offset: 4px;
+    }
+
+    /* 3D Option Buttons */
+    .options-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+    @media (min-width: 600px) {
+      .options-grid.grid-2col {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+    .option-btn {
+      position: relative;
+      background: #FFFFFF;
+      border: 2.5px solid #E2E8F0;
+      border-radius: 18px;
+      padding: 14px 18px;
+      font-size: 1.02rem;
+      font-weight: 700;
+      color: #2D3436;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      box-shadow: 0 5px 0 #CBD5E1;
+      transition: all 0.15s ease-in-out;
+      text-align: left;
+    }
+    .option-btn:hover:not(:disabled) {
+      transform: translateY(-2px) scale(1.015);
+      border-color: #0984E3;
+      box-shadow: 0 7px 0 #0767B1;
+      background: #F8FBFE;
+    }
+    .option-btn:active:not(:disabled) {
+      transform: translateY(4px);
+      box-shadow: 0 1px 0 #CBD5E1;
+    }
+    .opt-key {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 36px;
+      height: 36px;
+      border-radius: 12px;
+      background: #F1F2F6;
+      color: #57606F;
+      font-weight: 900;
+      font-size: 0.95rem;
+      flex-shrink: 0;
+      transition: background 0.2s, color 0.2s;
+    }
+
+    /* Option States */
+    .option-btn.selected-correct {
+      background: #E8F8F0 !important;
+      border-color: var(--correct-green) !important;
+      color: #0E6251 !important;
+      box-shadow: 0 5px 0 #00A853 !important;
+    }
+    .option-btn.selected-correct .opt-key {
+      background: var(--correct-green) !important;
+      color: #FFFFFF !important;
+    }
+
+    .option-btn.selected-wrong {
+      background: #FFEAEA !important;
+      border-color: var(--wrong-red) !important;
+      color: #922B21 !important;
+      box-shadow: 0 5px 0 #D63031 !important;
+      animation: shakeAnim 0.4s ease-in-out;
+    }
+    .option-btn.selected-wrong .opt-key {
+      background: var(--wrong-red) !important;
+      color: #FFFFFF !important;
+    }
+
+    .option-btn.show-truth {
+      border-color: var(--correct-green) !important;
+      background: #F0FFF4 !important;
+      box-shadow: 0 4px 0 #00A853 !important;
+    }
+    .option-btn.show-truth .opt-key {
+      background: #00BA66 !important;
+      color: #FFF !important;
+    }
+
+    @keyframes shakeAnim {
+      0%, 100% { transform: translateX(0); }
+      20% { transform: translateX(-8px); }
+      40% { transform: translateX(8px); }
+      60% { transform: translateX(-6px); }
+      80% { transform: translateX(6px); }
+    }
+
+    /* Visual Sign Containers */
+    .visual-wrapper {
+      margin: 16px 0 20px 0;
+      display: flex;
+      justify-content: center;
+    }
+    .traffic-sign-box {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      border: 12px solid #E84118;
+      background: #FFFFFF;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+    .traffic-sign-box::after {
+      content: '';
+      position: absolute;
+      width: 120px;
+      height: 12px;
+      background: #E84118;
+      transform: rotate(45deg);
+      border-radius: 6px;
+    }
+    .notice-plate-sign {
+      width: 100%;
+      max-width: 280px;
+      border: 4px solid #2F3542;
+      border-radius: 14px;
+      background: #FFFFFF;
+      overflow: hidden;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+      text-align: center;
+    }
+    .notice-plate-header {
+      background: #0984E3;
+      color: #FFFFFF;
+      font-weight: 900;
+      font-size: 1.3rem;
+      padding: 6px;
+      letter-spacing: 2px;
+    }
+    .notice-plate-body {
+      padding: 14px;
+      font-size: 1.15rem;
+      font-weight: 900;
+      color: #2D3436;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    /* Explanation Container */
+    .explanation-container {
+      display: none;
+      margin-top: 20px;
+      background: #FFFFFF;
+      border: 2px dashed #FFB8B8;
+      border-radius: 22px;
+      padding: 20px;
+      position: relative;
+      animation: slideInDown 0.35s ease;
+      box-shadow: 0 6px 20px rgba(255, 94, 98, 0.08);
+    }
+    @keyframes slideInDown {
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .exp-title-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 1.15rem;
+      font-weight: 900;
+      color: #FF5E62;
+      margin-bottom: 14px;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+
+    .exp-trans-box {
+      background: #FFFDF0;
+      border-left: 6px solid #FDCB6E;
+      border-radius: 16px;
+      padding: 12px 18px;
+      font-size: 1rem;
+      font-weight: 700;
+      color: #2D3436;
+      line-height: 1.5;
+      margin-bottom: 16px;
+      box-shadow: 0 2px 8px rgba(253, 203, 110, 0.15);
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+    }
+
+    .exp-section-title {
+      font-weight: 900;
+      font-size: 1rem;
+      color: #2D3436;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .exp-grid-cards {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+      margin-bottom: 18px;
+    }
+    @media (min-width: 620px) {
+      .exp-grid-cards {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+    .exp-card-item {
+      background: #FFFFFF;
+      border: 1.5px solid #E2E8F0;
+      border-radius: 16px;
+      padding: 12px 14px;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.03);
+      font-size: 0.94rem;
+      line-height: 1.5;
+    }
+    .exp-card-header {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 4px;
+    }
+    .card-word {
+      font-weight: 800;
+      font-size: 1.02rem;
+    }
+    .card-word.word-wrong {
+      color: #0984E3;
+    }
+    .card-word.word-correct {
+      color: #00BA66;
+    }
+
+    .badge-pill {
+      font-size: 0.78rem;
+      font-weight: 800;
+      padding: 2px 10px;
+      border-radius: 10px;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .badge-pill-wrong {
+      background: #F1F2F6;
+      color: #57606F;
+    }
+    .badge-pill-correct {
+      background: #E8F8F0;
+      color: #00A853;
+      border: 1px solid #A3E9C3;
+    }
+    .card-meaning {
+      color: #B33939;
+      font-weight: 700;
+      font-size: 0.88rem;
+    }
+
+    .exp-block {
+      margin-bottom: 14px;
+      font-size: 0.96rem;
+      line-height: 1.6;
+    }
+    .rule-tag {
+      background: #FFF3CD;
+      color: #856404;
+      font-weight: 800;
+      padding: 3px 10px;
+      border-radius: 10px;
+      margin-right: 6px;
+      display: inline-block;
+    }
+    .highlight-green-tag {
+      background: #D4EDDA;
+      color: #155724;
+      font-weight: 800;
+      padding: 2px 8px;
+      border-radius: 8px;
+      display: inline-block;
+    }
+    .wrong-key-pill {
+      background: #FFEAEA;
+      color: #D63031;
+      font-weight: 800;
+      padding: 2px 8px;
+      border-radius: 8px;
+      margin-right: 4px;
+      display: inline-block;
+    }
+
+    /* Submit Area */
+    .submit-area {
+      text-align: center;
+      margin: 35px 0 60px 0;
+    }
+    .btn-submit-main {
+      background: #00D26A;
+      color: #FFFFFF;
+      font-size: 1.3rem;
+      font-weight: 900;
+      padding: 16px 48px;
+      border-radius: 25px;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 8px 0 #00A853, 0 14px 25px rgba(0, 210, 106, 0.4);
+      transition: all 0.15s ease;
+      letter-spacing: 0.5px;
+    }
+    .btn-submit-main:hover {
+      transform: translateY(-3px) scale(1.02);
+      box-shadow: 0 11px 0 #00A853, 0 18px 30px rgba(0, 210, 106, 0.45);
+    }
+    .btn-submit-main:active {
+      transform: translateY(4px);
+      box-shadow: 0 3px 0 #00A853;
+    }
+
+    /* Score Modal Popup */
+    .modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(45, 52, 54, 0.75);
+      backdrop-filter: blur(8px);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+      padding: 16px;
+    }
+    .modal-overlay.active {
+      display: flex;
+      animation: modalFadeIn 0.3s ease;
+    }
+    @keyframes modalFadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    .score-modal {
+      background: #FFFFFF;
+      width: 100%;
+      max-width: 520px;
+      border-radius: 28px;
+      padding: 30px;
+      text-align: center;
+      border: 4px solid #0984E3;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+      position: relative;
+      animation: modalPop 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+    @keyframes modalPop {
+      0% { transform: scale(0.8); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+    .modal-trophy {
+      font-size: 4rem;
+      margin-bottom: 10px;
+      animation: bounceTrophy 1.5s infinite ease-in-out;
+    }
+    @keyframes bounceTrophy {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-12px); }
+    }
+    .score-huge {
+      font-size: 3.2rem;
+      font-weight: 900;
+      color: #0984E3;
+      margin: 10px 0;
+      line-height: 1;
+    }
+    .score-fraction {
+      font-size: 1.2rem;
+      color: #636E72;
+      font-weight: 800;
+    }
+    .feedback-box {
+      background: #F8F9FE;
+      border: 2px dashed #0984E3;
+      border-radius: 18px;
+      padding: 16px 20px;
+      margin: 20px 0;
+      text-align: left;
+    }
+    .feedback-teacher {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 8px;
+      font-weight: 900;
+      color: #0984E3;
+      font-size: 1rem;
+    }
+    .feedback-quote {
+      font-size: 1.02rem;
+      color: #2D3436;
+      line-height: 1.55;
+      font-weight: 700;
+      font-style: italic;
+    }
+    .btn-modal-close {
+      background: #0984E3;
+      color: #FFFFFF;
+      font-size: 1.1rem;
+      font-weight: 800;
+      padding: 14px 34px;
+      border-radius: 20px;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 5px 0 #0767B1;
+      transition: all 0.15s ease;
+      margin: 6px;
+    }
+    .btn-modal-close:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 7px 0 #0767B1;
+    }
+    .btn-modal-close:active {
+      transform: translateY(3px);
+      box-shadow: 0 2px 0 #0767B1;
+    }
+
+    #confetti-canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 10000;
+    }
+
+    @media (max-width: 600px) {
+      .app-container { padding: 10px; }
+      .quiz-card { padding: 18px 14px; }
+      .q-text { font-size: 1.05rem; }
+      .option-btn { font-size: 0.95rem; padding: 12px 14px; }
+      .btn-submit-main { font-size: 1.1rem; padding: 14px 32px; }
+      .unit-title { font-size: 1.35rem; }
+      .reading-passage-card { padding: 16px 14px; }
+    }
+  </style>
+</head>
+<body>
+
+  <canvas id="confetti-canvas"></canvas>
+
+  <div class="bg-elements" id="bgElements"></div>
+  <div class="city-skyline"></div>
+  <div class="bottom-road">
+    <div class="road-curb"></div>
+    <div class="road-lines"></div>
+  </div>
+
+  <div class="app-container">
+
+    <!-- Top Compact Teacher Announcement Banner -->
+    <div class="top-announcement">
+      <div class="announcement-text">
+        <span>👩‍🏫 Giáo viên tạo: <strong>Ms Lê Hằng English</strong></span>
+        <span class="teacher-badge">Master of English</span>
+      </div>
+      <div style="font-size: 0.82rem; color: #FF5E62; font-weight: 800;">
+        ⚡ BÀI TẬP ÔN TẬP TOÀN DIỆN (43 CÂU)
+      </div>
+    </div>
+
+    <!-- Header Unit Banner -->
+    <div class="unit-hero-card">
+      <div>
+        <div class="unit-badge">
+          <span>🚇 ENGLISH MASTERY · PRACTICE EXERCISES 9 - 12</span>
+        </div>
+        <h1 class="unit-title">Bộ Đề Luyện Tập Đọc Hiểu & Biển Báo</h1>
+        <div class="unit-subtitle">
+          Quảng cáo · Kỹ năng sống · Đọc hiểu Bàu Trúc & Đô thị · Điền câu · Biển báo
+        </div>
+      </div>
+      <div class="unit-icon-box">
+        🏙️
+      </div>
+    </div>
+
+    <!-- Top Sticky Bar -->
+    <div class="top-stats-bar">
+      <div class="pill-counter-left" id="starCounter">
+        <span>⭐</span>
+        <span id="correctScore">0</span><span>/43</span>
+      </div>
+      <div class="bar-track">
+        <div class="bar-fill" id="progressBar"></div>
+      </div>
+      <div class="pill-counter-right" id="progressPill">
+        <span id="answeredCount">0</span><span>/43</span>
+      </div>
+    </div>
+
+    <!-- Urgent Warning Box -->
+    <div class="warning-box">
+      <div class="warning-title">
+        <span>⚠️ LỜI NHẮC CỰC KỲ QUAN TRỌNG ⚠️</span>
+      </div>
+      <div class="warning-text">
+        Chỉ có đọc kỹ giải thích ngay sau mỗi câu, sau đó ghi lại từ vựng/cấu trúc mới vào vở để học thì mới thực sự giỏi lên.
+      </div>
+      <div class="warning-subtext">
+        👉 Làm cho xong mà không đọc giải thích hay đọc qua loa không ghi chép thì chỉ tốn thời gian vô ích!<br>
+        👇 <strong>Kéo tới đâu, làm tới đó! *</strong>
+      </div>
+    </div>
+
+    <!-- Quiz Cards Container -->
+    <div id="quizContainer"></div>
+
+    <!-- Submit Area -->
+    <div class="submit-area">
+      <button class="btn-submit-main" id="btnSubmit" onclick="calculateAndShowResult()">
+        🎉 NỘP BÀI & XEM TỔNG KẾT 🎉
+      </button>
+    </div>
+
+  </div>
+
+  <!-- Score Modal Popup -->
+  <div class="modal-overlay" id="scoreModal">
+    <div class="score-modal">
+      <div class="modal-trophy" id="modalTrophy">🏆</div>
+      <h2 style="color: #2D3436; font-size: 1.5rem; font-weight: 900;">KẾT QUẢ BÀI THI</h2>
+      <div class="score-huge" id="modalPercent">100%</div>
+      <div class="score-fraction" id="modalFraction">Đúng 43 / 43 câu</div>
+
+      <div class="feedback-box">
+        <div class="feedback-teacher">
+          <span>👩‍🏫 Lời nhận xét từ <strong>Ms Lê Hằng English</strong>:</span>
+        </div>
+        <div class="feedback-quote" id="modalTeacherQuote">
+          "Làm tốt lắm, con cố gắng ring điểm 10 ở lần sau nha!"
+        </div>
+      </div>
+
+      <div style="display: flex; justify-content: center; gap: 10px; flex-wrap: wrap;">
+        <button class="btn-modal-close" onclick="closeModal()">Đóng & Xem lại bài</button>
+        <button class="btn-modal-close" style="background: #00C9A7; box-shadow: 0 5px 0 #009688;" onclick="restartQuiz()">Làm lại bài thi 🔄</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    /* AUDIO GENERATION ENGINE */
+    const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+
+    function playDing() {
+      if (audioCtx.state === 'suspended') audioCtx.resume();
+      const now = audioCtx.currentTime;
+
+      const osc1 = audioCtx.createOscillator();
+      const gain1 = audioCtx.createGain();
+      osc1.type = 'triangle';
+      osc1.frequency.setValueAtTime(659.25, now);
+      gain1.gain.setValueAtTime(0.25, now);
+      gain1.gain.exponentialRampToValueAtTime(0.001, now + 0.35);
+      osc1.connect(gain1);
+      gain1.connect(audioCtx.destination);
+      osc1.start(now);
+      osc1.stop(now + 0.35);
+
+      const osc2 = audioCtx.createOscillator();
+      const gain2 = audioCtx.createGain();
+      osc2.type = 'sine';
+      osc2.frequency.setValueAtTime(987.77, now + 0.1);
+      gain2.gain.setValueAtTime(0.3, now + 0.1);
+      gain2.gain.exponentialRampToValueAtTime(0.001, now + 0.6);
+      osc2.connect(gain2);
+      gain2.connect(audioCtx.destination);
+      osc2.start(now + 0.1);
+      osc2.stop(now + 0.6);
+    }
+
+    function playWrongSound() {
+      if (audioCtx.state === 'suspended') audioCtx.resume();
+      const now = audioCtx.currentTime;
+
+      const notes = [320, 260, 210];
+      notes.forEach((freq, i) => {
+        const osc = audioCtx.createOscillator();
+        const gain = audioCtx.createGain();
+        osc.type = 'sawtooth';
+        osc.frequency.setValueAtTime(freq, now + i * 0.14);
+        gain.gain.setValueAtTime(0.2, now + i * 0.14);
+        gain.gain.exponentialRampToValueAtTime(0.001, now + (i + 1) * 0.14);
+        osc.connect(gain);
+        gain.connect(audioCtx.destination);
+        osc.start(now + i * 0.14);
+        osc.stop(now + (i + 1) * 0.14);
+      });
+    }
+
+    /* CONFETTI BURST EFFECT */
+    const canvas = document.getElementById('confetti-canvas');
+    const ctx = canvas.getContext('2d');
+    let confettiParticles = [];
+
+    function resizeCanvas() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    }
+    window.addEventListener('resize', resizeCanvas);
+    resizeCanvas();
+
+    function triggerConfetti(count = 70) {
+      const colors = ['#0984E3', '#FDCB6E', '#00C9A7', '#00D26A', '#FF4757', '#FF9FF3', '#6C5CE7'];
+      for (let i = 0; i < count; i++) {
+        confettiParticles.push({
+          x: window.innerWidth / 2 + (Math.random() - 0.5) * 320,
+          y: window.innerHeight * 0.35 + (Math.random() - 0.5) * 100,
+          w: Math.random() * 10 + 6,
+          h: Math.random() * 8 + 4,
+          color: colors[Math.floor(Math.random() * colors.length)],
+          vx: (Math.random() - 0.5) * 14,
+          vy: Math.random() * -12 - 5,
+          rot: Math.random() * 360,
+          rotSpeed: (Math.random() - 0.5) * 12,
+          gravity: 0.35,
+          opacity: 1
+        });
+      }
+      if (!isAnimatingConfetti) {
+        animateConfetti();
+      }
+    }
+
+    let isAnimatingConfetti = false;
+    function animateConfetti() {
+      if (confettiParticles.length === 0) {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        isAnimatingConfetti = false;
+        return;
+      }
+      isAnimatingConfetti = true;
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      for (let i = confettiParticles.length - 1; i >= 0; i--) {
+        const p = confettiParticles[i];
+        p.x += p.vx;
+        p.y += p.vy;
+        p.vy += p.gravity;
+        p.rot += p.rotSpeed;
+        p.opacity -= 0.012;
+
+        if (p.opacity <= 0 || p.y > window.innerHeight) {
+          confettiParticles.splice(i, 1);
+          continue;
+        }
+
+        ctx.save();
+        ctx.translate(p.x, p.y);
+        ctx.rotate((p.rot * Math.PI) / 180);
+        ctx.fillStyle = p.color;
+        ctx.globalAlpha = p.opacity;
+        ctx.fillRect(-p.w / 2, -p.h / 2, p.w, p.h);
+        ctx.restore();
+      }
+      requestAnimationFrame(animateConfetti);
+    }
+
+    function initBackgroundElements() {
+      const container = document.getElementById('bgElements');
+      const cloudSvg = '<svg width="120" height="70" viewBox="0 0 24 24" fill="%23FFFFFF"><path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96z"/></svg>';
+
+      for (let i = 0; i < 4; i++) {
+        const cloud = document.createElement('div');
+        cloud.className = 'floating-cloud';
+        cloud.style.top = `${12 + i * 20}%`;
+        cloud.style.animationDuration = `${24 + i * 8}s`;
+        cloud.style.animationDelay = `${i * 6}s`;
+        cloud.innerHTML = cloudSvg;
+        container.appendChild(cloud);
+      }
+    }
+
+    /* DATA: 43 QUESTIONS & PASSAGES */
+    const quizData = [
+      {"id": 1, "type": "Cụm từ cố định (Collocations)", "question": "Question 1 (Teens! Get Fit and Feel Great!): Learn how to (1)______ good choices and feel awesome every day.", "options": [{"key": "A", "text": "make"}, {"key": "B", "text": "take"}, {"key": "C", "text": "do"}, {"key": "D", "text": "look"}], "correct": "A", "trans": "Dịch: Hãy học cách đưa ra những lựa chọn tốt và cảm thấy tuyệt vời mỗi ngày.", "analysis": [{"word": "make", "badge": "make a choice / choices", "badgeType": "correct", "note": "= đưa ra quyết định, lựa chọn"}, {"word": "take", "badge": "take a look", "badgeType": "wrong", "note": "= không dùng take choices để chỉ đưa ra lựa chọn"}, {"word": "do", "badge": "do homework / do sports", "badgeType": "wrong", "note": "= không kết hợp với choices"}, {"word": "look", "badge": "nhìn, trông như", "badgeType": "wrong", "note": "= không đi kèm trực tiếp với tân ngữ choices"}], "whyCorrect": {"rule": "Collocation chuẩn với 'choice':", "content": "Cụm từ cố định chuẩn trong tiếng Anh: <span class='highlight-green-tag'>make choices / make a choice</span> (đưa ra sự lựa chọn/quyết định)."}, "whyWrong": [{"word": "take", "reason": "không kết hợp thành cụm mang nghĩa lựa chọn."}, {"word": "do", "reason": "do không đi với choices."}, {"word": "look", "reason": "sai nghĩa và ngữ pháp."}], "passage_key": "teens_guide", "is_first_in_passage": "teens_guide"},
+      {"id": 2, "type": "Cấu trúc get + Tính từ so sánh (Word Form)", "question": "Question 2: If you exercise regularly, you'll get (2)______ and feel better.", "options": [{"key": "A", "text": "strongly"}, {"key": "B", "text": "strengthen"}, {"key": "C", "text": "strength"}, {"key": "D", "text": "stronger"}], "correct": "D", "trans": "Dịch: Nếu bạn tập thể dục thường xuyên, bạn sẽ trở nên khỏe mạnh hơn và cảm thấy sảng khoái hơn.", "analysis": [{"word": "strongly", "badge": "trạng từ", "badgeType": "wrong", "note": "= sau linking verb 'get' không dùng trạng từ"}, {"word": "strengthen", "badge": "động từ", "badgeType": "wrong", "note": "= (v) củng cố, tăng cường"}, {"word": "strength", "badge": "danh từ", "badgeType": "wrong", "note": "= (n) sức mạnh"}, {"word": "stronger", "badge": "tính từ so sánh hơn", "badgeType": "correct", "note": "= get stronger: trở nên khỏe mạnh hơn (song hành với 'feel better')"}], "whyCorrect": {"rule": "Cấu trúc get + comparative adjective & Cấu trúc song hành:", "content": "Động từ nối 'get' đi với tính từ chỉ sự biến đổi (get + adj). Vế sau có <b>feel better</b> (tính từ so sánh hơn) nên vị trí này cần tính từ so sánh hơn tương ứng: <span class='highlight-green-tag'>stronger</span> (get stronger and feel better)."}, "whyWrong": [{"word": "strongly", "reason": "là trạng từ, get không đi với adv."}, {"word": "strengthen", "reason": "là động từ."}, {"word": "strength", "reason": "là danh từ."}], "passage_key": "teens_guide"},
+      {"id": 3, "type": "Mạo từ (Articles)", "question": "Question 3: You should follow our (3)______ tips to eat healthy foods and avoid junk food.", "options": [{"key": "A", "text": "no article"}, {"key": "B", "text": "a"}, {"key": "C", "text": "the"}, {"key": "D", "text": "an"}], "correct": "A", "trans": "Dịch: Bạn nên làm theo các lời khuyên của chúng tôi để ăn thực phẩm lành mạnh và tránh đồ ăn vặt.", "analysis": [{"word": "no article", "badge": "không mạo từ", "badgeType": "correct", "note": "= đã có tính từ sở hữu 'our' đứng trước nên không dùng thêm mạo từ"}, {"word": "a", "badge": "mạo từ không xác định số ít", "badgeType": "wrong", "note": "= tips là danh từ số nhiều và đã có 'our'"}, {"word": "the", "badge": "mạo từ xác định", "badgeType": "wrong", "note": "= không bao giờ dùng 'our the tips'"}, {"word": "an", "badge": "mạo từ số ít", "badgeType": "wrong", "note": "= sai cả số nhiều và thừa sau tính từ sở hữu"}], "whyCorrect": {"rule": "Quy tắc trật tự từ hạn định (Determiners):", "content": "Trong tiếng Anh, tính từ sở hữu (<b>our</b>) và mạo từ (<b>a/an/the</b>) đều thuộc nhóm từ hạn định trung tâm (central determiners) nên <b>không thể đứng liền kề nhau</b> (không có 'our the tips' hay 'our a tips'). Do đó phương án đúng là: <span class='highlight-green-tag'>no article</span> (our tips)."}, "whyWrong": [{"word": "a", "reason": "không đi với danh từ số nhiều tips và không đi sau 'our'."}, {"word": "the", "reason": "không dùng mạo từ 'the' ngay sau tính từ sở hữu 'our'."}, {"word": "an", "reason": "tips là số nhiều và bắt đầu bằng phụ âm."}], "passage_key": "teens_guide"},
+      {"id": 4, "type": "Từ để hỏi đi với to-V (Wh- + to V)", "question": "Question 4: Learn (4)______ to relax and stay positive.", "options": [{"key": "A", "text": "why"}, {"key": "B", "text": "where"}, {"key": "C", "text": "what"}, {"key": "D", "text": "how"}], "correct": "D", "trans": "Dịch: Hãy học cách thư giãn và luôn giữ tinh thần lạc quan.", "analysis": [{"word": "why", "badge": "tại sao", "badgeType": "wrong", "note": "= không có cấu trúc why to relax"}, {"word": "where", "badge": "ở đâu", "badgeType": "wrong", "note": "= học nơi chốn để thư giãn (không tự nhiên bằng học cách thức)"}, {"word": "what", "badge": "cái gì", "badgeType": "wrong", "note": "= what to do (relax là nội động từ không nhận tân ngữ)"}, {"word": "how", "badge": "như thế nào, cách thức", "badgeType": "correct", "note": "= learn how to do sth: học cách làm điều gì"}], "whyCorrect": {"rule": "Cấu trúc learn how to V:", "content": "Cụm từ chỉ việc tiếp thu kỹ năng, phương pháp: <span class='highlight-green-tag'>learn how to do sth</span> (học cách làm việc gì đó) → <b>learn how to relax</b>."}, "whyWrong": [{"word": "why", "reason": "tiếng Anh không dùng 'why + to-V'."}, {"word": "where", "reason": "sai ngữ nghĩa chỉ cách thức thư giãn."}, {"word": "what", "reason": "relax là nội động từ, không ghép 'what to relax'."}], "passage_key": "teens_guide"},
+      {"id": 5, "type": "Mạo từ với so sánh nhất (Articles)", "question": "Question 5 (Riverfront Night Market): This vibrant event showcases (1)______ best of our city's riverside charm.", "options": [{"key": "A", "text": "no article"}, {"key": "B", "text": "an"}, {"key": "C", "text": "the"}, {"key": "D", "text": "a"}], "correct": "C", "trans": "Dịch: Sự kiện sôi động này giới thiệu những nét duyên dáng tuyệt vời nhất bên bờ sông của thành phố chúng ta.", "analysis": [{"word": "no article", "badge": "không mạo từ", "badgeType": "wrong", "note": "= so sánh nhất bắt buộc có mạo từ 'the'"}, {"word": "an", "badge": "mạo từ số ít", "badgeType": "wrong", "note": "= best bắt đầu bằng phụ âm /b/"}, {"word": "the", "badge": "the best of sth", "badgeType": "correct", "note": "= mạo từ xác định đi với dạng so sánh nhất (the best)"}, {"word": "a", "badge": "mạo từ không xác định", "badgeType": "wrong", "note": "= không dùng 'a best'"}], "whyCorrect": {"rule": "Mạo từ xác định 'the' trước so sánh nhất:", "content": "Tính từ so sánh nhất <b>best</b> luôn đi kèm mạo từ xác định: <span class='highlight-green-tag'>the best of sth</span> (những gì tinh túy, tốt đẹp nhất của...)."}, "whyWrong": [{"word": "no article", "reason": "thiếu mạo từ trước so sánh nhất."}, {"word": "an", "reason": "sai mạo từ."}, {"word": "a", "reason": "so sánh nhất không đi với mạo từ 'a'."}], "passage_key": "riverfront_market", "is_first_in_passage": "riverfront_market"},
+      {"id": 6, "type": "Từ vựng (Vocabulary - Ẩm thực đường phố)", "question": "Question 6: Join us along the riverbank for an evening filled with (2)______ street food, unique crafts, and live music.", "options": [{"key": "A", "text": "unreliable"}, {"key": "B", "text": "peaceful"}, {"key": "C", "text": "beautiful"}, {"key": "D", "text": "delicious"}], "correct": "D", "trans": "Dịch: Hãy cùng chúng tôi dạo dọc bờ sông để tận hưởng một buổi tối tràn ngập đồ ăn đường phố ngon tuyệt, đồ thủ công độc đáo và âm nhạc sống động.", "analysis": [{"word": "unreliable", "badge": "không đáng tin cậy", "badgeType": "wrong", "note": "= mang nghĩa tiêu cực, không dùng cho quảng bá ẩm thực"}, {"word": "peaceful", "badge": "yên bình", "badgeType": "wrong", "note": "= không dùng bổ nghĩa cho 'street food'"}, {"word": "beautiful", "badge": "xinh đẹp", "badgeType": "wrong", "note": "= dùng cho cảnh quan, không dùng cho món ăn"}, {"word": "delicious", "badge": "thơm ngon", "badgeType": "correct", "note": "= tính từ chuẩn miêu tả món ăn đường phố (delicious street food)"}], "whyCorrect": {"rule": "Kết hợp tính từ miêu tả món ăn:", "content": "Đi với danh từ <b>street food</b> (ẩm thực đường phố), tính từ phù hợp và tự nhiên nhất là: <span class='highlight-green-tag'>delicious</span> (thơm ngon)."}, "whyWrong": [{"word": "unreliable", "reason": "nghĩa tiêu cực (không đáng tin cậy)."}, {"word": "peaceful", "reason": "dùng cho không gian tĩnh lặng, không đi với đồ ăn."}, {"word": "beautiful", "reason": "không dùng để khen vị ngon của thức ăn."}], "passage_key": "riverfront_market"},
+      {"id": 7, "type": "Từ loại (Word Form - Phân từ làm tính từ)", "question": "Question 7: Explore stalls offering handmade goods, enjoy (3)______ views, and immerse yourself...", "options": [{"key": "A", "text": "stunned"}, {"key": "B", "text": "stun"}, {"key": "C", "text": "stunning"}, {"key": "D", "text": "to stun"}], "correct": "C", "trans": "Dịch: Khám phá các gian hàng bán đồ thủ công, ngắm nhìn những khung cảnh tuyệt đẹp lộng lẫy và đắm chìm vào không khí sôi động...", "analysis": [{"word": "stunned", "badge": "bị choáng ngợp", "badgeType": "wrong", "note": "= (adj) miêu tả cảm xúc con người bị sốc/choáng ngợp"}, {"word": "stun", "badge": "động từ", "badgeType": "wrong", "note": "= (v) làm choáng váng"}, {"word": "stunning", "badge": "tuyệt đẹp, lộng lẫy", "badgeType": "correct", "note": "= (adj) miêu tả cảnh vật đẹp đến ngỡ ngàng (stunning views)"}, {"word": "to stun", "badge": "động từ nguyên mẫu có to", "badgeType": "wrong", "note": "= không đứng trước danh từ views làm bổ ngữ"}], "whyCorrect": {"rule": "Tính từ đuôi -ing miêu tả tính chất cảnh quan:", "content": "Trước danh từ <b>views</b> (quang cảnh) cần tính từ chỉ đặc điểm, vẻ đẹp lộng lẫy của phong cảnh: <span class='highlight-green-tag'>stunning views</span> (cảnh đẹp tuyệt vời/lộng lẫy)."}, "whyWrong": [{"word": "stunned", "reason": "đuôi -ed dùng miêu tả cảm xúc của con người."}, {"word": "stun", "reason": "là động từ."}, {"word": "to stun", "reason": "sai ngữ pháp."}], "passage_key": "riverfront_market"},
+      {"id": 8, "type": "Giới từ cố định (Prepositions)", "question": "Question 8: ...and immerse yourself (4)______ the lively atmosphere.", "options": [{"key": "A", "text": "in"}, {"key": "B", "text": "on"}, {"key": "C", "text": "at"}, {"key": "D", "text": "with"}], "correct": "A", "trans": "Dịch: ...và đắm chìm mình vào bầu không khí náo nhiệt nơi đây.", "analysis": [{"word": "in", "badge": "immerse oneself in", "badgeType": "correct", "note": "= đắm chìm vào một không gian/bầu không khí"}, {"word": "on", "badge": "trên bề mặt", "badgeType": "wrong", "note": "= không đi với immerse"}, {"word": "at", "badge": "tại", "badgeType": "wrong", "note": "= không đi với immerse"}, {"word": "with", "badge": "với", "badgeType": "wrong", "note": "= sai giới từ"}], "whyCorrect": {"rule": "Cấu trúc thành ngữ immerse in:", "content": "Cụm từ cố định: <span class='highlight-green-tag'>immerse oneself in something</span> = đắm chìm, hòa mình trọn vẹn vào điều gì đó (ở đây là bầu không khí nhộn nhịp)."}, "whyWrong": [{"word": "on", "reason": "sai giới từ."}, {"word": "at", "reason": "sai giới từ."}, {"word": "with", "reason": "sai giới từ."}], "passage_key": "riverfront_market"},
+      {"id": 9, "type": "Danh từ ghép (Compound Nouns)", "question": "Question 9 (Exercise 9 - Passage 1): ...but with some good time (1)______ techniques, it's possible to achieve a study-life balance.", "options": [{"key": "A", "text": "limitation"}, {"key": "B", "text": "period"}, {"key": "C", "text": "management"}, {"key": "D", "text": "awareness"}], "correct": "C", "trans": "Dịch: ...nhưng với một số kỹ thuật quản lý thời gian tốt, bạn hoàn toàn có thể đạt được sự cân bằng giữa học tập và cuộc sống.", "analysis": [{"word": "limitation", "badge": "sự giới hạn", "badgeType": "wrong", "note": "= giới hạn thời gian (không phải kỹ thuật rèn luyện)"}, {"word": "period", "badge": "khoảng thời gian", "badgeType": "wrong", "note": "= tiết học, thời kỳ"}, {"word": "management", "badge": "sự quản lý", "badgeType": "correct", "note": "= time management: kỹ năng/quản lý thời gian"}, {"word": "awareness", "badge": "nhận thức", "badgeType": "wrong", "note": "= sự nhận thức"}], "whyCorrect": {"rule": "Thuật ngữ kỹ năng sống chuẩn quốc tế:", "content": "Cụm danh từ ghép cố định: <span class='highlight-green-tag'>time management</span> (quản lý thời gian) → <b>time management techniques</b> (các phương pháp quản lý thời gian)."}, "whyWrong": [{"word": "limitation", "reason": "không tạo thành cụm kỹ thuật quản lý."}, {"word": "period", "reason": "không ghép với techniques."}, {"word": "awareness", "reason": "sai nghĩa kỹ năng quản lý."}], "passage_key": "ex9_time_mgmt", "is_first_in_passage": "ex9_time_mgmt"},
+      {"id": 10, "type": "Kết hợp từ (Collocations)", "question": "Question 10: Firstly, (2)______ a schedule. Plan your week in advance...", "options": [{"key": "A", "text": "give"}, {"key": "B", "text": "hold"}, {"key": "C", "text": "work"}, {"key": "D", "text": "make"}], "correct": "D", "trans": "Dịch: Trước hết, hãy lập một thời gian biểu. Lên kế hoạch trước cho tuần của bạn...", "analysis": [{"word": "give", "badge": "cho, tặng", "badgeType": "wrong", "note": "= không đi với a schedule"}, {"word": "hold", "badge": "cầm, tổ chức", "badgeType": "wrong", "note": "= hold an event"}, {"word": "work", "badge": "làm việc", "badgeType": "wrong", "note": "= work on a schedule (cần giới từ)"}, {"word": "make", "badge": "make a schedule", "badgeType": "correct", "note": "= lập thời gian biểu/lịch trình"}], "whyCorrect": {"rule": "Collocation lập kế hoạch/lịch trình:", "content": "Cụm từ cố định chỉ việc lập thời khóa biểu, lịch trình là: <span class='highlight-green-tag'>make a schedule</span>."}, "whyWrong": [{"word": "give", "reason": "sai collocation."}, {"word": "hold", "reason": "không kết hợp với a schedule."}, {"word": "work", "reason": "work là nội động từ, cần có giới từ (work on)."}], "passage_key": "ex9_time_mgmt"},
+      {"id": 11, "type": "Động từ khuyết thiếu (Modal Verbs)", "question": "Question 11: You (3)______ also include breaks and time for relaxation or hobbies.", "options": [{"key": "A", "text": "should"}, {"key": "B", "text": "mustn't"}, {"key": "C", "text": "ought not to"}, {"key": "D", "text": "may"}], "correct": "A", "trans": "Dịch: Bạn cũng nên đưa vào các khoảng nghỉ giải lao và thời gian thư giãn hoặc theo đuổi sở thích.", "analysis": [{"word": "should", "badge": "nên (lời khuyên hữu ích)", "badgeType": "correct", "note": "= đưa ra lời khuyên tích cực trong việc lập thời gian biểu"}, {"word": "mustn't", "badge": "cấm đoán", "badgeType": "wrong", "note": "= không được phép (sai nghĩa nghiêm trọng)"}, {"word": "ought not to", "badge": "không nên", "badgeType": "wrong", "note": "= khuyên không nên làm (ngược nghĩa hoàn toàn)"}, {"word": "may", "badge": "có thể (xác suất)", "badgeType": "wrong", "note": "= chỉ khả năng xảy ra, không mang tính khuyên nhủ"}], "whyCorrect": {"rule": "Modal verb đưa ra lời khuyên hữu ích:", "content": "Văn bản đang đưa ra các lời khuyên (tips) hữu ích để cân bằng cuộc sống, do đó động từ khuyết thiếu đưa ra lời khuyên chuẩn nhất là: <span class='highlight-green-tag'>should</span> (nên làm gì)."}, "whyWrong": [{"word": "mustn't", "reason": "mang nghĩa cấm đoán tiêu cực."}, {"word": "ought not to", "reason": "mang nghĩa không nên làm, ngược hoàn toàn lời khuyên."}, {"word": "may", "reason": "không dùng để đưa ra lời khuyên định hướng."}], "passage_key": "ex9_time_mgmt"},
+      {"id": 12, "type": "Giới từ đi kèm động từ (Prepositions)", "question": "Question 12: You should identify the most important tasks and focus (4)______ those first.", "options": [{"key": "A", "text": "to"}, {"key": "B", "text": "on"}, {"key": "C", "text": "with"}, {"key": "D", "text": "of"}], "correct": "B", "trans": "Dịch: Bạn nên xác định những nhiệm vụ quan trọng nhất và tập trung vào những việc đó trước.", "analysis": [{"word": "to", "badge": "tới", "badgeType": "wrong", "note": "= không đi với focus"}, {"word": "on", "badge": "focus on", "badgeType": "correct", "note": "= tập trung vào cái gì"}, {"word": "with", "badge": "với", "badgeType": "wrong", "note": "= không đi với focus"}, {"word": "of", "badge": "của", "badgeType": "wrong", "note": "= sai giới từ"}], "whyCorrect": {"rule": "Cấu trúc giới từ đi với 'focus':", "content": "Động từ <b>focus</b> luôn đi kèm với giới từ <b>on</b>: <span class='highlight-green-tag'>focus on something</span> = tập trung sự chú ý/nỗ lực vào điều gì."}, "whyWrong": [{"word": "to", "reason": "sai giới từ."}, {"word": "with", "reason": "sai giới từ."}, {"word": "of", "reason": "sai giới từ."}], "passage_key": "ex9_time_mgmt"},
+      {"id": 13, "type": "Thành ngữ cố định (Idioms/Collocations)", "question": "Question 13: Thirdly, take (5)______ of any free time during the day.", "options": [{"key": "A", "text": "responsibility"}, {"key": "B", "text": "action"}, {"key": "C", "text": "advantage"}, {"key": "D", "text": "moment"}], "correct": "C", "trans": "Dịch: Thứ ba, hãy tận dụng bất kỳ khoảng thời gian rảnh nào trong ngày.", "analysis": [{"word": "responsibility", "badge": "take responsibility for", "badgeType": "wrong", "note": "= chịu trách nhiệm (đi với giới từ for, không đi với of)"}, {"word": "action", "badge": "take action on/against", "badgeType": "wrong", "note": "= hành động"}, {"word": "advantage", "badge": "take advantage of", "badgeType": "correct", "note": "= tận dụng cơ hội / thời gian"}, {"word": "moment", "badge": "khoảnh khắc", "badgeType": "wrong", "note": "= không tạo thành cụm từ phù hợp"}], "whyCorrect": {"rule": "Cụm thành ngữ 'take advantage of':", "content": "Thành ngữ cố định: <span class='highlight-green-tag'>take advantage of something</span> = tận dụng triệt để cơ hội/thời gian rảnh rỗi để làm việc có ích."}, "whyWrong": [{"word": "responsibility", "reason": "cụm từ đúng là take responsibility FOR."}, {"word": "action", "reason": "take action không đi với of time."}, {"word": "moment", "reason": "không tạo thành cụm từ chuẩn."}], "passage_key": "ex9_time_mgmt"},
+      {"id": 14, "type": "Cấu trúc consider + V-ing", "question": "Question 14: In these situations, you can consider (6)______ to a teacher or school counsellor for support.", "options": [{"key": "A", "text": "talking"}, {"key": "B", "text": "to talking"}, {"key": "C", "text": "talked"}, {"key": "D", "text": "to be talked"}], "correct": "A", "trans": "Dịch: Trong những tình huống này, bạn có thể cân nhắc việc trò chuyện với thầy cô hoặc chuyên viên tư vấn tâm lý học đường để nhận được sự trợ giúp.", "analysis": [{"word": "talking", "badge": "V-ing chuẩn", "badgeType": "correct", "note": "= consider + V-ing: cân nhắc làm việc gì"}, {"word": "to talking", "badge": "sai dạng", "badgeType": "wrong", "note": "= consider không đi với to V-ing"}, {"word": "talked", "badge": "quá khứ", "badgeType": "wrong", "note": "= không đứng sau consider"}, {"word": "to be talked", "badge": "bị động to-V", "badgeType": "wrong", "note": "= sai cả chủ động lẫn dạng động từ"}], "whyCorrect": {"rule": "Quy tắc ngữ pháp sau động từ 'consider':", "content": "Động từ <b>consider</b> bắt buộc đi với danh động từ <b>V-ing</b>: <span class='highlight-green-tag'>consider + V-ing</span> (cân nhắc làm việc gì) → <b>consider talking to...</b>."}, "whyWrong": [{"word": "to talking", "reason": "sai cấu trúc."}, {"word": "talked", "reason": "consider không đi với V-ed."}, {"word": "to be talked", "reason": "chủ ngữ là người chủ động trò chuyện, không dùng bị động và consider không đi với to-V."}], "passage_key": "ex9_time_mgmt"},
+      {"id": 15, "type": "Cụm từ cố định (Collocations)", "question": "Question 15 (Exercise 9 - Passage 2): It is more important than ever to succeed at school if you hope to (1)______ a chance in the job market afterwards.", "options": [{"key": "A", "text": "wonder"}, {"key": "B", "text": "have"}, {"key": "C", "text": "doing"}, {"key": "D", "text": "take on"}], "correct": "B", "trans": "Dịch: Việc thành công ở trường học trở nên quan trọng hơn bao giờ hết nếu bạn hy vọng có được cơ hội trên thị trường việc làm sau này.", "analysis": [{"word": "wonder", "badge": "băn khoăn", "badgeType": "wrong", "note": "= không ghép với a chance"}, {"word": "have", "badge": "have a chance", "badgeType": "correct", "note": "= có cơ hội thành công (hope to have a chance)"}, {"word": "doing", "badge": "V-ing", "badgeType": "wrong", "note": "= sau hope to phải là động từ nguyên thể"}, {"word": "take on", "badge": "đảm nhận", "badgeType": "wrong", "note": "= take on a task/responsibility, không đi với a chance"}], "whyCorrect": {"rule": "Collocation 'have a chance':", "content": "Cụm từ cố định chuẩn: <span class='highlight-green-tag'>have a chance</span> = có cơ hội. Sau 'hope to' cần động từ nguyên thể: <b>hope to have a chance</b>."}, "whyWrong": [{"word": "wonder", "reason": "sai nghĩa."}, {"word": "doing", "reason": "sai dạng (sau 'to' cần V-bare)."}, {"word": "take on", "reason": "nghĩa là gánh vác, đảm nhận."}], "passage_key": "ex9_teen_stress", "is_first_in_passage": "ex9_teen_stress"},
+      {"id": 16, "type": "Giới từ đi kèm động từ (Prepositions)", "question": "Question 16: It’s no wonder that many young people worry (2)______ letting down their parents...", "options": [{"key": "A", "text": "of"}, {"key": "B", "text": "at"}, {"key": "C", "text": "about"}, {"key": "D", "text": "with"}], "correct": "C", "trans": "Dịch: Không có gì lạ khi nhiều bạn trẻ lo lắng về việc làm cha mẹ mình thất vọng...", "analysis": [{"word": "of", "badge": "của", "badgeType": "wrong", "note": "= không đi với worry"}, {"word": "at", "badge": "tại", "badgeType": "wrong", "note": "= không đi với worry"}, {"word": "about", "badge": "worry about", "badgeType": "correct", "note": "= lo lắng về điều gì"}, {"word": "with", "badge": "với", "badgeType": "wrong", "note": "= sai giới từ"}], "whyCorrect": {"rule": "Giới từ đi với 'worry':", "content": "Động từ <b>worry</b> luôn đi kèm với giới từ <b>about</b>: <span class='highlight-green-tag'>worry about doing something</span> = lo lắng về việc gì."}, "whyWrong": [{"word": "of", "reason": "sai giới từ."}, {"word": "at", "reason": "sai giới từ."}, {"word": "with", "reason": "sai giới từ."}], "passage_key": "ex9_teen_stress"},
+      {"id": 17, "type": "Cụm động từ (Phrasal Verbs)", "question": "Question 17: The result is that young people (3)______ from stress.", "options": [{"key": "A", "text": "suffer"}, {"key": "B", "text": "please"}, {"key": "C", "text": "balance"}, {"key": "D", "text": "cope with"}], "correct": "A", "trans": "Dịch: Hậu quả là những người trẻ tuổi phải chịu đựng sự căng thẳng (stress).", "analysis": [{"word": "suffer", "badge": "suffer from", "badgeType": "correct", "note": "= chịu đựng, bị ảnh hưởng xấu bởi bệnh tật/stress"}, {"word": "please", "badge": "làm hài lòng", "badgeType": "wrong", "note": "= không đi với giới từ 'from'"}, {"word": "balance", "badge": "cân bằng", "badgeType": "wrong", "note": "= balance A and B (không đi với from)"}, {"word": "cope with", "badge": "đối phó với", "badgeType": "wrong", "note": "= cope đi với 'with', không đi với 'from'"}], "whyCorrect": {"rule": "Cụm từ suffer from:", "content": "Đi với giới từ <b>from</b> phía sau để chỉ việc gánh chịu hậu quả tiêu cực của căng thẳng, cụm từ chuẩn xác là: <span class='highlight-green-tag'>suffer from stress</span>."}, "whyWrong": [{"word": "please", "reason": "không kết hợp với 'from'."}, {"word": "balance", "reason": "không đi với 'from'."}, {"word": "cope with", "reason": "đã có sẵn 'with' nên không đi với 'from'."}], "passage_key": "ex9_teen_stress"},
+      {"id": 18, "type": "Động từ khuyết thiếu (Modal Verbs)", "question": "Question 18: But caffeine is a drug which (4)______ become addictive.", "options": [{"key": "A", "text": "can't"}, {"key": "B", "text": "mustn't"}, {"key": "C", "text": "have to"}, {"key": "D", "text": "can"}], "correct": "D", "trans": "Dịch: Nhưng caffeine là một chất có thể gây nghiện.", "analysis": [{"word": "can't", "badge": "không thể", "badgeType": "wrong", "note": "= trái ngược với thực tế khoa học"}, {"word": "mustn't", "badge": "không được phép", "badgeType": "wrong", "note": "= cấm đoán, không chỉ tính chất của chất kích thích"}, {"word": "have to", "badge": "phải", "badgeType": "wrong", "note": "= mang tính bắt buộc cưỡng chế"}, {"word": "can", "badge": "có thể (chỉ khả năng)", "badgeType": "correct", "note": "= can become addictive: có khả năng gây nghiện"}], "whyCorrect": {"rule": "Modal verb chỉ khả năng (Possibility):", "content": "Để diễn tả khả năng một chất có thể dẫn đến tình trạng nghiện, ta dùng modal verb: <span class='highlight-green-tag'>can</span> (can become addictive)."}, "whyWrong": [{"word": "can't", "reason": "ngược nghĩa thực tế."}, {"word": "mustn't", "reason": "chỉ sự cấm đoán của con người."}, {"word": "have to", "reason": "chỉ sự bắt buộc."}], "passage_key": "ex9_teen_stress"},
+      {"id": 19, "type": "Liên từ chỉ nguyên nhân (Conjunctions)", "question": "Question 19: ...physical exercise is a good release for stress, (5)______ it increases certain chemicals in the brain...", "options": [{"key": "A", "text": "although"}, {"key": "B", "text": "unless"}, {"key": "C", "text": "because"}, {"key": "D", "text": "because of"}], "correct": "C", "trans": "Dịch: ...tập thể dục là một cách giải tỏa căng thẳng rất tốt, bởi vì nó làm tăng một số chất hóa học trong não giúp bạn bình tĩnh lại.", "analysis": [{"word": "although", "badge": "mặc dù", "badgeType": "wrong", "note": "= chỉ sự tương phản đối lập"}, {"word": "unless", "badge": "trừ khi", "badgeType": "wrong", "note": "= unless = if not"}, {"word": "because", "badge": "bởi vì (+ mệnh đề)", "badgeType": "correct", "note": "= liên từ chỉ nguyên nhân đi với mệnh đề có S + V"}, {"word": "because of", "badge": "bởi vì (+ cụm N)", "badgeType": "wrong", "note": "= phía sau là mệnh đề có chủ vị 'it increases' nên không dùng because of"}], "whyCorrect": {"rule": "Phân biệt because và because of:", "content": "Vế sau là một mệnh đề hoàn chỉnh gồm chủ ngữ và vị ngữ: <b>it (S) + increases (V)</b>. Do đó ta phải dùng liên từ <span class='highlight-green-tag'>because</span> (chứ không dùng giới từ 'because of' chỉ đi với danh từ/V-ing)."}, "whyWrong": [{"word": "although", "reason": "hai vế không mang tính tương phản."}, {"word": "unless", "reason": "sai nghĩa điều kiện."}, {"word": "because of", "reason": "sau 'because of' không được là mệnh đề S + V."}], "passage_key": "ex9_teen_stress"},
+      {"id": 20, "type": "Cụm từ cố định (Collocations)", "question": "Question 20: You have to get enough sleep to avoid stress and to stay healthy and full of (6)______.", "options": [{"key": "A", "text": "obstacle"}, {"key": "B", "text": "effort"}, {"key": "C", "text": "assignment"}, {"key": "D", "text": "energy"}], "correct": "D", "trans": "Dịch: Bạn phải ngủ đủ giấc để tránh căng thẳng và để giữ sức khỏe cũng như tràn đầy năng lượng.", "analysis": [{"word": "obstacle", "badge": "chướng ngại vật", "badgeType": "wrong", "note": "= không phù hợp ngữ cảnh tích cực"}, {"word": "effort", "badge": "sự nỗ lực", "badgeType": "wrong", "note": "= không dùng full of effort để miêu tả trạng thái cơ thể khỏe mạnh"}, {"word": "assignment", "badge": "bài tập", "badgeType": "wrong", "note": "= tràn đầy bài tập (sai nghĩa)"}, {"word": "energy", "badge": "năng lượng", "badgeType": "correct", "note": "= full of energy: tràn đầy năng lượng sống"}], "whyCorrect": {"rule": "Thành ngữ 'full of energy':", "content": "Cụm từ chuẩn diễn tả trạng thái khỏe khoắn, sung sức sau giấc ngủ đủ: <span class='highlight-green-tag'>full of energy</span> (tràn đầy năng lượng)."}, "whyWrong": [{"word": "obstacle", "reason": "nghĩa tiêu cực (trở ngại)."}, {"word": "effort", "reason": "không tự nhiên."}, {"word": "assignment", "reason": "bài tập về nhà là nguồn cơn gây stress."}], "passage_key": "ex9_teen_stress"},
+      {"id": 21, "type": "Đọc hiểu - Tiêu đề bài đọc (Reading Comprehension)", "question": "Question 21 (Exercise 10 - Passage 1): What can be the best title for the passage?", "options": [{"key": "A", "text": "\"Traditional Pottery Techniques in Vietnam\""}, {"key": "B", "text": "\"Bau Truc: A Unique Pottery Village\""}, {"key": "C", "text": "\"The Art of Clay Collection\""}, {"key": "D", "text": "\"Craftsmanship in Ninh Thuan\""}], "correct": "B", "trans": "Dịch: Tiêu đề nào phù hợp nhất cho đoạn văn?", "analysis": [{"word": "Option A", "badge": "quá rộng", "badgeType": "wrong", "note": "= nói chung về kỹ thuật gốm cả nước, trong khi bài chỉ tập trung vào Bàu Trúc"}, {"word": "Option B", "badge": "chuẩn xác nhất", "badgeType": "correct", "note": "= Bàu Trúc: Làng gốm độc đáo (bao quát từ nguồn đất sét, kỹ thuật không dùng bàn xoay đến trang trí)"}, {"word": "Option C", "badge": "quá hẹp", "badgeType": "wrong", "note": "= chỉ nói về việc lấy đất sét ở đoạn 1"}, {"word": "Option D", "badge": "quá chung chung", "badgeType": "wrong", "note": "= nghề thủ công ở Ninh Thuận"}], "whyCorrect": {"rule": "Xác định chủ đề bao quát toàn bài:", "content": "Đoạn văn tập trung toàn diện về làng gốm Bàu Trúc: nguồn đất sét đặc biệt từ sông Quao, cách làm gốm thủ công độc đáo không dùng bàn xoay, và các hoa văn trang trí mang đậm đời sống bản địa. Do đó tiêu đề thích hợp nhất là: <span class='highlight-green-tag'>\"Bau Truc: A Unique Pottery Village\"</span>."}, "whyWrong": [{"word": "Option A", "reason": "quá rộng khắp Việt Nam."}, {"word": "Option C", "reason": "chỉ là một chi tiết ở đoạn 1."}, {"word": "Option D", "reason": "bài không nói về các nghề thủ công khác ở Ninh Thuận."}], "passage_key": "ex10_bau_truc", "is_first_in_passage": "ex10_bau_truc"},
+      {"id": 22, "type": "Đọc hiểu - Từ quy chiếu (Reference Pronoun)", "question": "Question 22: What does the word \"They\" in the passage refer to?", "options": [{"key": "A", "text": "People in Bau Truc pottery village"}, {"key": "B", "text": "Cites in Bau Truc pottery village"}, {"key": "C", "text": "Items in Bau Truc pottery village"}, {"key": "D", "text": "Rivers in Bau Truc pottery village"}], "correct": "A", "trans": "Dịch: Từ \"They\" trong đoạn văn ám chỉ đối tượng nào?", "analysis": [{"word": "People in Bau Truc...", "badge": "người dân làng gốm Bàu Trúc", "badgeType": "correct", "note": "= đại từ thay thế cho 'people in Bau Truc pottery village' ở câu liền trước"}, {"word": "Cites...", "badge": "thành phố", "badgeType": "wrong", "note": "= không hợp lý"}, {"word": "Items...", "badge": "các đồ vật gốm", "badgeType": "wrong", "note": "= đồ vật không thể thực hiện hành động 'do not use the wheel'"}, {"word": "Rivers...", "badge": "các dòng sông", "badgeType": "wrong", "note": "= sai chủ ngữ thực hiện hành động"}], "whyCorrect": {"rule": "Xác định danh từ quy chiếu đứng trước:", "content": "Câu văn: 'Currently, <b>people in Bau Truc pottery village</b> still make pottery items in the traditional way. <b>They</b> do not use the wheel...' -> Đại từ <b>They</b> thay thế trực tiếp cho danh từ chỉ người ở câu trước: <span class='highlight-green-tag'>People in Bau Truc pottery village</span>."}, "whyWrong": [{"word": "Option B", "reason": "sai nghĩa."}, {"word": "Option C", "reason": "đồ vật gốm không thể 'không dùng bàn xoay'."}, {"word": "Option D", "reason": "dòng sông không làm gốm."}], "passage_key": "ex10_bau_truc"},
+      {"id": 23, "type": "Đọc hiểu - Từ vựng ngữ cảnh (Vocabulary in Context)", "question": "Question 23: What does the word \"silky\" in the passage mostly mean?", "options": [{"key": "A", "text": "the pottery items"}, {"key": "B", "text": "the river where clay is collected"}, {"key": "C", "text": "the craftsmen's hands"}, {"key": "D", "text": "the texture of the clay"}], "correct": "D", "trans": "Dịch: Từ \"silky\" (mịn màng như lụa) trong đoạn văn chủ yếu chỉ điều gì?", "analysis": [{"word": "the pottery items", "badge": "sản phẩm gốm hoàn thiện", "badgeType": "wrong", "note": "= silky đứng trước clay block bổ nghĩa cho khối đất sét"}, {"word": "the river...", "badge": "dòng sông", "badgeType": "wrong", "note": "= không chỉ dòng sông"}, {"word": "the craftsmen's hands", "badge": "bàn tay nghệ nhân", "badgeType": "wrong", "note": "= không chỉ bàn tay"}, {"word": "the texture of the clay", "badge": "kết cấu mịn màng của đất sét", "badgeType": "correct", "note": "= miêu tả độ mịn, mượt mà của khối đất sét nhuyễn"}], "whyCorrect": {"rule": "Nghĩa của tính từ miêu tả chất liệu:", "content": "Trong câu: 'From this step, <b>silky</b> clay block initially gradually forms...', tính từ <b>silky</b> bổ nghĩa cho 'clay block' (khối đất sét), miêu tả độ mịn màng, mềm mượt của đất sau khi được nhào nặn kỹ lưỡng: <span class='highlight-green-tag'>the texture of the clay</span>."}, "whyWrong": [{"word": "Option A", "reason": "không phải sản phẩm đã nung xong."}, {"word": "Option B", "reason": "không miêu tả dòng sông."}, {"word": "Option C", "reason": "không miêu tả bàn tay nghệ nhân."}], "passage_key": "ex10_bau_truc"},
+      {"id": 24, "type": "Đọc hiểu - Tìm chi tiết bài đọc (Detail Question)", "question": "Question 24: What do the designs of Bau Truc pottery reflect?", "options": [{"key": "A", "text": "religious symbols"}, {"key": "B", "text": "abstract patterns"}, {"key": "C", "text": "daily life of local people"}, {"key": "D", "text": "natural scenery"}], "correct": "C", "trans": "Dịch: Các họa tiết thiết kế trên gốm Bàu Trúc phản ánh điều gì?", "analysis": [{"word": "religious symbols", "badge": "biểu tượng tôn giáo", "badgeType": "wrong", "note": "= bài không đề cập"}, {"word": "abstract patterns", "badge": "họa tiết trừu tượng", "badgeType": "wrong", "note": "= bài không đề cập"}, {"word": "daily life of local people", "badge": "đời sống thường ngày của người dân", "badgeType": "correct", "note": "= trùng khớp 100% với 'daily life of Bau Truc's people'"}, {"word": "natural scenery", "badge": "phong cảnh thiên nhiên", "badgeType": "wrong", "note": "= không được nhắc tới trực tiếp"}], "whyCorrect": {"rule": "Dẫn chứng câu cuối bài đọc:", "content": "Câu cuối đoạn văn nêu rõ: 'These items are decorated with seashells, snails or hand-made paintings <b>featuring the daily life of Bau Truc's people</b>'. Điều này đồng nghĩa với: <span class='highlight-green-tag'>daily life of local people</span>."}, "whyWrong": [{"word": "Option A", "reason": "không có biểu tượng tôn giáo."}, {"word": "Option B", "reason": "không phải họa tiết trừu tượng."}, {"word": "Option D", "reason": "không phải tranh phong cảnh thuần túy."}], "passage_key": "ex10_bau_truc"},
+      {"id": 25, "type": "Đọc hiểu - Nhận định sai (NOT True Question)", "question": "Question 25: Which of the following is NOT true according to the passage?", "options": [{"key": "A", "text": "Clay is collected from the Quao River once a year."}, {"key": "B", "text": "Bau Truc pottery items are made from clay mixed with sand."}, {"key": "C", "text": "Craftsmen use a potter's wheel to shape the products."}, {"key": "D", "text": "The pottery is decorated with seashells and snails."}], "correct": "C", "trans": "Dịch: Điều nào sau đây là KHÔNG ĐÚNG theo đoạn văn?", "analysis": [{"word": "Option A", "badge": "thông tin đúng", "badgeType": "wrong", "note": "= đoạn 1 viết 'collected from the river only once a year'"}, {"word": "Option B", "badge": "thông tin đúng", "badgeType": "wrong", "note": "= đoạn 1 viết 'clay from the Quao River mixed with sand'"}, {"word": "Option C", "badge": "THÔNG TIN SAI (ĐÁP ÁN)", "badgeType": "correct", "note": "= bài viết 'They DO NOT use the wheel', nên khẳng định họ dùng bàn xoay là sai"}, {"word": "Option D", "badge": "thông tin đúng", "badgeType": "wrong", "note": "= đoạn cuối viết 'decorated with seashells, snails'"}], "whyCorrect": {"rule": "Đối chiếu thông tin phủ định:", "content": "Đoạn 2 nêu nét độc đáo đặc trưng nhất của gốm Bàu Trúc: <b>'They do not use the wheel but the craftsmen have to turn around the products'</b>. Do đó, khẳng định <span class='highlight-green-tag'>Craftsmen use a potter's wheel to shape the products</span> là sai so với bài đọc."}, "whyWrong": [{"word": "Option A", "reason": "thông tin đúng có trong đoạn 1."}, {"word": "Option B", "reason": "thông tin đúng có trong đoạn 1."}, {"word": "Option D", "reason": "thông tin đúng có trong đoạn 3."}], "passage_key": "ex10_bau_truc"},
+      {"id": 26, "type": "Đọc hiểu - Ý chính bài đọc (Main Idea)", "question": "Question 26 (Exercise 10 - Passage 2): What is the passage mainly about?", "options": [{"key": "A", "text": "Advantages of living in big cities"}, {"key": "B", "text": "Disadvantages of living in big cities"}, {"key": "C", "text": "Drawbacks of living rural areas"}, {"key": "D", "text": "Benefits of living rural areas"}], "correct": "A", "trans": "Dịch: Ý chính của đoạn văn là gì?", "analysis": [{"word": "Advantages of living in big cities", "badge": "lợi ích sống ở thành phố lớn", "badgeType": "correct", "note": "= bao quát toàn bài: giải trí, giao thông công cộng tiện lợi, chăm sóc y tế 24/7"}, {"word": "Disadvantages...", "badge": "nhược điểm", "badgeType": "wrong", "note": "= chỉ được nhắc ngắn gọn ở 2 câu đầu làm nền"}, {"word": "Drawbacks of living rural...", "badge": "nhược điểm nông thôn", "badgeType": "wrong", "note": "= nông thôn chỉ được nhắc so sánh nhỏ ở đoạn 3"}, {"word": "Benefits of living rural...", "badge": "lợi ích nông thôn", "badgeType": "wrong", "note": "= lạc đề hoàn toàn"}], "whyCorrect": {"rule": "Ý chính bao quát toàn bài viết:", "content": "Sau khi đề cập ngắn gọn về chi phí đắt đỏ ở mở đầu, toàn bộ nội dung chính của bài đi sâu chứng minh những lợi thế to lớn của thành phố: giải trí đa dạng, xe buýt công cộng giúp giảm kẹt xe và tiết kiệm tiền gửi xe, cùng hệ thống y tế hiện đại phục vụ 24/24. Do đó chủ đề chính là: <span class='highlight-green-tag'>Advantages of living in big cities</span>."}, "whyWrong": [{"word": "Option B", "reason": "nhược điểm chỉ được nhắc lướt qua ở đầu bài."}, {"word": "Option C", "reason": "vùng nông thôn chỉ là yếu tố so sánh phụ."}, {"word": "Option D", "reason": "bài không nói về lợi ích ở nông thôn."}], "passage_key": "ex10_big_city", "is_first_in_passage": "ex10_big_city"},
+      {"id": 27, "type": "Đọc hiểu - Từ đồng nghĩa (Synonyms)", "question": "Question 27: Which of the following is closest in meaning to the word \"countless\" in paragraph 1?", "options": [{"key": "A", "text": "definite"}, {"key": "B", "text": "numberless"}, {"key": "C", "text": "measurable"}, {"key": "D", "text": "limited"}], "correct": "B", "trans": "Dịch: Từ nào sau đây gần nghĩa nhất với từ \"countless\" (vô số, không đếm xuể) ở đoạn 1?", "analysis": [{"word": "definite", "badge": "rõ ràng, xác định", "badgeType": "wrong", "note": "= trái nghĩa với không đếm xuể"}, {"word": "numberless", "badge": "vô số, vô kể", "badgeType": "correct", "note": "= numberless = countless (quá nhiều không đếm được)"}, {"word": "measurable", "badge": "có thể đo lường được", "badgeType": "wrong", "note": "= trái nghĩa"}, {"word": "limited", "badge": "hạn chế, có hạn", "badgeType": "wrong", "note": "= trái nghĩa hoàn toàn"}], "whyCorrect": {"rule": "Từ đồng nghĩa:", "content": "Tính từ <b>countless</b> cấu tạo từ 'count' (đếm) + hậu tố '-less' (không thể), đồng nghĩa hoàn toàn với <span class='highlight-green-tag'>numberless</span> (vô số, nhiều vô kể)."}, "whyWrong": [{"word": "definite", "reason": "nghĩa là xác định, rõ ràng."}, {"word": "measurable", "reason": "nghĩa là đo đếm được."}, {"word": "limited", "reason": "nghĩa là có giới hạn, ít ỏi."}], "passage_key": "ex10_big_city"},
+      {"id": 28, "type": "Đọc hiểu - Chi tiết bài đọc (Detail Question)", "question": "Question 28: What makes living in big cities costly?", "options": [{"key": "A", "text": "public transport"}, {"key": "B", "text": "healthcare"}, {"key": "C", "text": "high cost of living"}, {"key": "D", "text": "high parking charges"}], "correct": "C", "trans": "Dịch: Điều gì làm cho việc sống ở các thành phố lớn trở nên đắt đỏ, tốn kém?", "analysis": [{"word": "public transport", "badge": "giao thông công cộng", "badgeType": "wrong", "note": "= bài nói đi phương tiện công cộng giúp tiết kiệm tiền"}, {"word": "healthcare", "badge": "chăm sóc y tế", "badgeType": "wrong", "note": "= không nêu là nguyên nhân làm đắt đỏ"}, {"word": "high cost of living", "badge": "chi phí sinh hoạt cao", "badgeType": "correct", "note": "= dẫn chứng trực tiếp câu 2 đoạn 1"}, {"word": "high parking charges", "badge": "phí đỗ xe cao", "badgeType": "wrong", "note": "= chỉ là một chi tiết nhỏ khi đi ô tô"}], "whyCorrect": {"rule": "Dẫn chứng từ câu thứ 2 đoạn 1:", "content": "Câu thứ hai của bài viết nêu rõ: 'It is said that living in big cities is expensive because of the <b>high living cost</b>' (chi phí sinh hoạt cao). Trùng khớp hoàn toàn với phương án: <span class='highlight-green-tag'>high cost of living</span>."}, "whyWrong": [{"word": "Option A", "reason": "giao thông công cộng giúp tiết kiệm chi phí."}, {"word": "Option B", "reason": "bài không nói y tế gây đắt đỏ."}, {"word": "Option D", "reason": "chỉ là chi phí phụ nếu đi ô tô riêng."}], "passage_key": "ex10_big_city"},
+      {"id": 29, "type": "Đọc hiểu - Chi tiết bài đọc (Detail Question)", "question": "Question 29: According to the passage, what is people's concern?", "options": [{"key": "A", "text": "traffic congestions"}, {"key": "B", "text": "air pollution"}, {"key": "C", "text": "medical centers"}, {"key": "D", "text": "good health"}], "correct": "D", "trans": "Dịch: Theo đoạn văn, mối quan tâm hàng đầu của mọi người là gì?", "analysis": [{"word": "traffic congestions", "badge": "tắc đường", "badgeType": "wrong", "note": "= là vấn đề giao thông, không phải concern được bài nhấn mạnh ở đoạn 3"}, {"word": "air pollution", "badge": "ô nhiễm không khí", "badgeType": "wrong", "note": "= là vấn đề môi trường"}, {"word": "medical centers", "badge": "trung tâm y tế", "badgeType": "wrong", "note": "= là nơi cung cấp dịch vụ"}, {"word": "good health", "badge": "sức khỏe tốt", "badgeType": "correct", "note": "= 'Staying healthy is everybody's concern' -> good health"}], "whyCorrect": {"rule": "Dẫn chứng câu mở đầu đoạn 3:", "content": "Đoạn 3 mở đầu bằng: <b>'Staying healthy is everybody's concern...'</b> (Giữ gìn sức khỏe là mối quan tâm của tất cả mọi người). Do đó đáp án chuẩn xác là: <span class='highlight-green-tag'>good health</span> (sức khỏe tốt)."}, "whyWrong": [{"word": "Option A", "reason": "tắc đường là vấn nạn đô thị."}, {"word": "Option B", "reason": "ô nhiễm là thực trạng."}, {"word": "Option C", "reason": "trung tâm y tế là cơ sở khám chữa bệnh."}], "passage_key": "ex10_big_city"},
+      {"id": 30, "type": "Đọc hiểu - Câu suy luận (Inference Question)", "question": "Question 30: It can be inferred from the passage that in big cities", "options": [{"key": "A", "text": "no one cares about the high cost of living."}, {"key": "B", "text": "it's impossible to get medical care for severe diseases."}, {"key": "C", "text": "traffic jams are often seen during rush hours."}, {"key": "D", "text": "city dwellers do not have to pay for parking."}], "correct": "C", "trans": "Dịch: Có thể suy ra từ đoạn văn rằng ở các thành phố lớn:", "analysis": [{"word": "Option A", "badge": "không ai quan tâm chi phí đắt đỏ", "badgeType": "wrong", "note": "= sai, chi phí đắt đỏ là vấn đề được nêu rõ"}, {"word": "Option B", "badge": "không thể chữa bệnh nặng", "badgeType": "wrong", "note": "= ngược với bài (find the best medical care for severe diseases)"}, {"word": "Option C", "badge": "thường tắc đường vào giờ cao điểm", "badgeType": "correct", "note": "= 'traffic jams that often occur at peak times' (peak times = rush hours)"}, {"word": "Option D", "badge": "người dân không phải trả tiền đỗ xe", "badgeType": "wrong", "note": "= họ chỉ không phải trả tiền gửi xe nếu đi phương tiện công cộng"}], "whyCorrect": {"rule": "Suy luận từ từ đồng nghĩa ngữ cảnh:", "content": "Đoạn 2 viết: '...the problem of <b>traffic jams that often occur at peak times</b>'. Thuật ngữ <b>peak times</b> đồng nghĩa hoàn toàn với <b>rush hours</b> (giờ cao điểm). Do đó ta suy ra: <span class='highlight-green-tag'>traffic jams are often seen during rush hours</span>."}, "whyWrong": [{"word": "Option A", "reason": "ngược với câu đầu đoạn 1."}, {"word": "Option B", "reason": "ngược hoàn toàn đoạn 3."}, {"word": "Option D", "reason": "chỉ người đi xe buýt/tàu điện mới không tốn phí đỗ xe."}], "passage_key": "ex10_big_city"},
+      {"id": 31, "type": "Điền cụm câu vào đoạn văn (Sentence Insertion)", "question": "Question 31 (Exercise 11 - The Tube): The London Underground, affectionately nicknamed “the Tube,” [1]____, which resemble a maze for the strangers.", "options": [{"key": "A", "text": "Navigating the Tube requires a degree of skill and familiarity"}, {"key": "B", "text": "Despite its complexity"}, {"key": "C", "text": "is a complex and sprawling network of underground railway lines"}, {"key": "D", "text": "it holds the distinction of being the oldest underground railway system in the world"}], "correct": "C", "trans": "Dịch: Tàu điện ngầm London, được đặt biệt danh thân mật là 'the Tube', là một mạng lưới đường sắt ngầm phức tạp và rộng lớn, trông như một mê cung đối với những người lạ.", "analysis": [{"word": "Option A", "badge": "mệnh đề độc lập", "badgeType": "wrong", "note": "= câu chưa có vị ngữ chính cho chủ ngữ The London Underground"}, {"word": "Option B", "badge": "cụm giới từ", "badgeType": "wrong", "note": "= không làm vị ngữ"}, {"word": "Option C", "badge": "vị ngữ động từ 'is'", "badgeType": "correct", "note": "= đóng vai trò là vị ngữ chính (is a complex and sprawling network...)"}, {"word": "Option D", "badge": "thừa chủ ngữ 'it'", "badgeType": "wrong", "note": "= câu đã có chủ ngữ 'The London Underground' nên không dùng 'it holds'"}], "whyCorrect": {"rule": "Cấu trúc Chủ ngữ - Vị ngữ trong câu đơn phức:", "content": "Chủ ngữ câu là <b>The London Underground</b> (kèm mệnh đề đồng vị 'affectionately nicknamed the Tube'). Vị trí [1] bắt buộc phải là một cụm vị ngữ bắt đầu bằng động từ <b>is</b> để làm vị ngữ chính cho chủ ngữ: <span class='highlight-green-tag'>is a complex and sprawling network of underground railway lines</span>."}, "whyWrong": [{"word": "Option A", "reason": "bắt đầu bằng chủ ngữ mới, làm câu mất liên kết."}, {"word": "Option B", "reason": "chỉ là cụm trạng từ."}, {"word": "Option D", "reason": "bị thừa đại từ chủ ngữ 'it'."}], "passage_key": "ex11_london_tube", "is_first_in_passage": "ex11_london_tube"},
+      {"id": 32, "type": "Điền cụm câu vào đoạn văn (Sentence Insertion)", "question": "Question 32: Opened in 1863, [2]____.", "options": [{"key": "A", "text": "Navigating the Tube requires a degree of skill and familiarity"}, {"key": "B", "text": "Despite its complexity"}, {"key": "C", "text": "is a complex and sprawling network of underground railway lines"}, {"key": "D", "text": "it holds the distinction of being the oldest underground railway system in the world"}], "correct": "D", "trans": "Dịch: Được khai trương vào năm 1863, nó nắm giữ vinh dự là hệ thống đường sắt ngầm lâu đời nhất trên thế giới.", "analysis": [{"word": "Option A", "badge": "sai chủ ngữ rút gọn", "badgeType": "wrong", "note": "= việc điều hướng không thể được mở năm 1863"}, {"word": "Option B", "badge": "cụm giới từ", "badgeType": "wrong", "note": "= thiếu mệnh đề chính"}, {"word": "Option C", "badge": "thiếu chủ ngữ", "badgeType": "wrong", "note": "= sau cụm phân từ 'Opened in 1863' cần mệnh đề có chủ ngữ chỉ hệ thống tàu"}, {"word": "Option D", "badge": "mệnh đề chính chuẩn xác", "badgeType": "correct", "note": "= it (thay thế cho The Tube) + holds the distinction of being the oldest..."}], "whyCorrect": {"rule": "Rút gọn mệnh đề đồng chủ ngữ bằng Quá khứ phân từ (V-ed):", "content": "Cụm phân từ quá khứ <b>Opened in 1863</b> (Được khai trương vào năm 1863) cần một mệnh đề chính có chủ ngữ tương ứng là <b>it</b> (ám chỉ the Tube): <span class='highlight-green-tag'>it holds the distinction of being the oldest underground railway system in the world</span>."}, "whyWrong": [{"word": "Option A", "reason": "chủ ngữ 'Navigating' không tương thích với 'Opened in 1863'."}, {"word": "Option B", "reason": "không phải mệnh đề chính."}, {"word": "Option C", "reason": "thiếu chủ ngữ."}], "passage_key": "ex11_london_tube"},
+      {"id": 33, "type": "Điền cụm câu vào đoạn văn (Sentence Insertion)", "question": "Question 33: ...transporting millions of passengers daily across its vast expanse. [3]____. Carefully studying detailed maps and understanding the nuances...", "options": [{"key": "A", "text": "Navigating the Tube requires a degree of skill and familiarity"}, {"key": "B", "text": "Despite its complexity"}, {"key": "C", "text": "is a complex and sprawling network of underground railway lines"}, {"key": "D", "text": "it holds the distinction of being the oldest underground railway system in the world"}], "correct": "A", "trans": "Dịch: ...vận chuyển hàng triệu hành khách mỗi ngày trên không gian rộng lớn của nó. Việc di chuyển trên tàu Tube đòi hỏi một mức độ kỹ năng và sự quen thuộc nhất định.", "analysis": [{"word": "Option A", "badge": "câu mở ý cho việc đọc bản đồ", "badgeType": "correct", "note": "= câu hoàn chỉnh độc lập dẫn dắt vào kỹ năng nghiên cứu bản đồ ở câu kế tiếp"}, {"word": "Option B", "badge": "cụm từ chưa trọn câu", "badgeType": "wrong", "note": "= không thể đứng một mình có dấu chấm câu"}, {"word": "Option C", "badge": "cụm vị ngữ thiếu chủ ngữ", "badgeType": "wrong", "note": "= đã dùng ở [1]"}, {"word": "Option D", "badge": "đã dùng ở [2]", "badgeType": "wrong", "note": "= nói về lịch sử 1863"}], "whyCorrect": {"rule": "Tính liên kết chuyển tiếp câu trong văn bản:", "content": "Câu tiếp theo nói về: 'Carefully studying detailed maps and understanding the nuances... are essential skills' (nghiên cứu bản đồ là kỹ năng cần thiết). Do đó câu đứng trước làm tiền đề mở ý hoàn hảo là: <span class='highlight-green-tag'>Navigating the Tube requires a degree of skill and familiarity</span>."}, "whyWrong": [{"word": "Option B", "reason": "chỉ là cụm giới từ, không thể đứng thành một câu hoàn chỉnh có dấu chấm."}, {"word": "Option C", "reason": "thiếu chủ ngữ."}, {"word": "Option D", "reason": "lạc đề sang lịch sử."}], "passage_key": "ex11_london_tube"},
+      {"id": 34, "type": "Điền cụm câu vào đoạn văn (Sentence Insertion)", "question": "Question 34: [4]____, the Tube is undeniably a convenient and efficient way to travel around London.", "options": [{"key": "A", "text": "Navigating the Tube requires a degree of skill and familiarity"}, {"key": "B", "text": "Despite its complexity"}, {"key": "C", "text": "is a complex and sprawling network of underground railway lines"}, {"key": "D", "text": "it holds the distinction of being the oldest underground railway system in the world"}], "correct": "B", "trans": "Dịch: Bất chấp sự phức tạp của nó, tàu điện ngầm Tube không thể phủ nhận là một cách thuận tiện và hiệu quả để đi lại quanh London.", "analysis": [{"word": "Option A", "badge": "câu hoàn chỉnh", "badgeType": "wrong", "note": "= không đứng trước dấu phẩy liên kết với mệnh đề chính"}, {"word": "Option B", "badge": "cụm giới từ nhượng bộ", "badgeType": "correct", "note": "= Despite its complexity, [mệnh đề chính] (Mặc dù phức tạp nhưng rất thuận tiện)"}, {"word": "Option C", "badge": "vị ngữ thiếu chủ ngữ", "badgeType": "wrong", "note": "= không đứng đầu câu"}, {"word": "Option D", "badge": "thừa mệnh đề", "badgeType": "wrong", "note": "= hai mệnh đề độc lập không nối bằng dấu phẩy"}], "whyCorrect": {"rule": "Cấu trúc trạng từ nhượng bộ (Despite + Noun Phrase):", "content": "Sau dấu phẩy là mệnh đề chính: 'the Tube is undeniably a convenient and efficient way...'. Vị trí đầu câu cần một trạng ngữ chỉ sự nhượng bộ tương phản: <span class='highlight-green-tag'>Despite its complexity</span> (Mặc dù phức tạp)."}, "whyWrong": [{"word": "Option A", "reason": "hai mệnh đề độc lập bị lỗi comma splice."}, {"word": "Option C", "reason": "bắt đầu bằng động từ 'is' không có chủ ngữ."}, {"word": "Option D", "reason": "nối 2 mệnh đề bằng dấu phẩy là sai ngữ pháp."}], "passage_key": "ex11_london_tube"},
+      {"id": 35, "type": "Điền cụm câu vào đoạn văn (Sentence Insertion)", "question": "Question 35 (Exercise 11 - New York City): New York City is a mix of cultures, [1]____. This remarkable diversity is evident in the city’s unique neighborhoods...", "options": [{"key": "A", "text": "boasts a rich history and continues to be a hub for music and artistic expression"}, {"key": "B", "text": "with people from over 200 countries represented within its diverse population"}, {"key": "C", "text": "In contrast, bustling Chinatown transports you to another world"}, {"key": "D", "text": "Little Italy offers a taste of Italy"}], "correct": "B", "trans": "Dịch: Thành phố New York là sự hòa trộn của nhiều nền văn hóa, với cư dân đến từ hơn 200 quốc gia hiện diện trong cộng đồng dân cư đa dạng của thành phố.", "analysis": [{"word": "Option A", "badge": "vị ngữ", "badgeType": "wrong", "note": "= dành cho chủ ngữ Harlem ở [4]"}, {"word": "Option B", "badge": "cụm giới từ bổ nghĩa", "badgeType": "correct", "note": "= bổ nghĩa giải thích chi tiết cho 'mix of cultures'"}, {"word": "Option C", "badge": "Chinatown", "badgeType": "wrong", "note": "= dành cho khu người Hoa ở [3]"}, {"word": "Option D", "badge": "Little Italy", "badgeType": "wrong", "note": "= dành cho khu người Ý ở [2]"}], "whyCorrect": {"rule": "Cụm giới từ 'with' bổ nghĩa cho danh từ:", "content": "Sau cụm 'a mix of cultures' (sự pha trộn văn hóa), câu tiếp tục bằng cụm giới từ miêu tả: <span class='highlight-green-tag'>with people from over 200 countries represented within its diverse population</span>, tạo tiền đề cho câu tiếp theo: 'This remarkable diversity...'."}, "whyWrong": [{"word": "Option A", "reason": "nói về lịch sử và nghệ thuật của Harlem."}, {"word": "Option C", "reason": "nói về khu Chinatown ở câu sau."}, {"word": "Option D", "reason": "nói về khu Little Italy ở câu sau."}], "passage_key": "ex11_nyc", "is_first_in_passage": "ex11_nyc"},
+      {"id": 36, "type": "Điền cụm câu vào đoạn văn (Sentence Insertion)", "question": "Question 36: [2]____, which transports you to a world of authentic restaurants and charming bakeries lining the streets. The aromas of freshly baked bread and hot sauces fill the air, creating a sensory experience that evokes the heart of Italy.", "options": [{"key": "A", "text": "boasts a rich history and continues to be a hub for music and artistic expression"}, {"key": "B", "text": "with people from over 200 countries represented within its diverse population"}, {"key": "C", "text": "In contrast, bustling Chinatown transports you to another world"}, {"key": "D", "text": "Little Italy offers a taste of Italy"}], "correct": "D", "trans": "Dịch: Khu phố Little Italy mang lại hương vị của nước Ý, nơi đưa bạn đến thế giới của các nhà hàng truyền thống và tiệm bánh quyến rũ dọc theo các con phố.", "analysis": [{"word": "Option A", "badge": "nói về Harlem", "badgeType": "wrong", "note": "= không liên quan đến nước Ý"}, {"word": "Option B", "badge": "đã dùng ở [1]", "badgeType": "wrong", "note": "= nói về 200 quốc gia"}, {"word": "Option C", "badge": "nói về Chinatown", "badgeType": "wrong", "note": "= khu người Hoa"}, {"word": "Option D", "badge": "Little Italy", "badgeType": "correct", "note": "= giới thiệu khu phố Ý 'Little Italy offers a taste of Italy' (tương ứng với 'evokes the heart of Italy')"}], "whyCorrect": {"rule": "Từ khóa định hướng ngữ cảnh (Keyword Context):", "content": "Đoạn văn tiếp nối với các hình ảnh bánh mì mới nướng, sốt nóng và <b>the heart of Italy</b> (trái tim nước Ý). Do đó câu mở đầu giới thiệu khu phố Ý là: <span class='highlight-green-tag'>Little Italy offers a taste of Italy</span>."}, "whyWrong": [{"word": "Option A", "reason": "nói về văn hóa Harlem da màu."}, {"word": "Option B", "reason": "đã điền ở câu trước."}, {"word": "Option C", "reason": "Chinatown là khu người Hoa."}], "passage_key": "ex11_nyc"},
+      {"id": 37, "type": "Điền cụm câu vào đoạn văn (Sentence Insertion)", "question": "Question 37: [3]____, with its markets overflowing with exotic spices and delicious street food. Here, you can experience the rich cultural heritage of China through its sights, sounds, and flavors.", "options": [{"key": "A", "text": "boasts a rich history and continues to be a hub for music and artistic expression"}, {"key": "B", "text": "with people from over 200 countries represented within its diverse population"}, {"key": "C", "text": "In contrast, bustling Chinatown transports you to another world"}, {"key": "D", "text": "Little Italy offers a taste of Italy"}], "correct": "C", "trans": "Dịch: Ngược lại, khu phố Tàu Chinatown nhộn nhịp lại đưa bạn đến một thế giới khác, với các khu chợ tràn ngập gia vị độc đáo và ẩm thực đường phố thơm ngon.", "analysis": [{"word": "Option A", "badge": "Harlem", "badgeType": "wrong", "note": "= dành cho câu 38"}, {"word": "Option B", "badge": "đã dùng ở [1]", "badgeType": "wrong", "note": "= không phù hợp"}, {"word": "Option C", "badge": "Chinatown", "badgeType": "correct", "note": "= giới thiệu khu người Hoa 'Chinatown transports you to another world' tương ứng với 'heritage of China'"}, {"word": "Option D", "badge": "Little Italy", "badgeType": "wrong", "note": "= đã dùng ở [2]"}], "whyCorrect": {"rule": "Từ khóa định hướng địa danh văn hóa:", "content": "Câu văn sau nêu rõ: 'cultural heritage of <b>China</b>' (di sản văn hóa Trung Hoa). Khu phố tương ứng tại New York chính là: <span class='highlight-green-tag'>In contrast, bustling Chinatown transports you to another world</span>."}, "whyWrong": [{"word": "Option A", "reason": "dành cho Harlem ở câu sau."}, {"word": "Option B", "reason": "nằm ở câu 35."}, {"word": "Option D", "reason": "nằm ở câu 36."}], "passage_key": "ex11_nyc"},
+      {"id": 38, "type": "Điền cụm câu vào đoạn văn (Sentence Insertion)", "question": "Question 38: Harlem, known as a center of African American culture, [4]____. This incredible cultural richness contributes to the city’s dynamic energy...", "options": [{"key": "A", "text": "boasts a rich history and continues to be a hub for music and artistic expression"}, {"key": "B", "text": "with people from over 200 countries represented within its diverse population"}, {"key": "C", "text": "In contrast, bustling Chinatown transports you to another world"}, {"key": "D", "text": "Little Italy offers a taste of Italy"}], "correct": "A", "trans": "Dịch: Khu Harlem, được biết đến như trung tâm văn hóa của người Mỹ gốc Phi, tự hào có lịch sử phong phú và tiếp tục là trung tâm của âm nhạc và biểu đạt nghệ thuật.", "analysis": [{"word": "Option A", "badge": "vị ngữ cho Harlem", "badgeType": "correct", "note": "= hoàn thiện vị ngữ cho chủ ngữ 'Harlem' (boasts a rich history...)"}, {"word": "Option B", "badge": "cụm giới từ", "badgeType": "wrong", "note": "= thiếu động từ chính cho Harlem"}, {"word": "Option C", "badge": "Chinatown", "badgeType": "wrong", "note": "= đã dùng ở câu 37"}, {"word": "Option D", "badge": "Little Italy", "badgeType": "wrong", "note": "= đã dùng ở câu 36"}], "whyCorrect": {"rule": "Hoàn thiện vị ngữ cho câu đơn:", "content": "Chủ ngữ là <b>Harlem, known as a center of African American culture</b> (kèm mệnh đề tính từ rút gọn). Vị trí [4] cần một cụm vị ngữ động từ hoàn chỉnh: <span class='highlight-green-tag'>boasts a rich history and continues to be a hub for music and artistic expression</span>."}, "whyWrong": [{"word": "Option B", "reason": "không có động từ chính cho câu."}, {"word": "Option C", "reason": "lạc đề sang Chinatown."}, {"word": "Option D", "reason": "lạc đề sang Little Italy."}], "passage_key": "ex11_nyc"},
+      {"id": 39, "type": "Biển báo thông báo (Notice Sign)", "question": "Question 39 (Exercise 12 - Question 1): Look at the sign below. What does this sign mean?", "hasCustomVisual": "cash_only_sign", "options": [{"key": "A", "text": "She is out of cash."}, {"key": "B", "text": "We only accept payment in cash."}, {"key": "C", "text": "The shop charges less if the customer doesn't pay in cash."}, {"key": "D", "text": "Please exchange money here."}], "correct": "B", "trans": "Dịch: Biển báo dưới đây có ý nghĩa gì?", "analysis": [{"word": "She is out of cash", "badge": "cô ấy hết tiền mặt", "badgeType": "wrong", "note": "= hiểu sai chữ cash only"}, {"word": "We only accept payment in cash", "badge": "chỉ nhận thanh toán bằng tiền mặt", "badgeType": "correct", "note": "= Cash Only = chỉ nhận tiền mặt (không nhận thẻ hay chuyển khoản)"}, {"word": "The shop charges less...", "badge": "tính rẻ hơn nếu không trả tiền mặt", "badgeType": "wrong", "note": "= hoàn toàn bịa đặt"}, {"word": "Please exchange money here", "badge": "vui lòng đổi tiền ở đây", "badgeType": "wrong", "note": "= đây là quầy thu ngân bán hàng, không phải quầy đổi ngoại tệ"}], "whyCorrect": {"rule": "Ý nghĩa thông báo thương mại 'Cash Only':", "content": "Cụm từ <b>Cash Only</b> tại quầy thu ngân có nghĩa là cửa hàng chỉ chấp nhận thanh toán bằng tiền mặt: <span class='highlight-green-tag'>We only accept payment in cash</span>."}, "whyWrong": [{"word": "Option A", "reason": "sai nghĩa cá nhân."}, {"word": "Option C", "reason": "sai chính sách cửa hàng."}, {"word": "Option D", "reason": "không phải quầy đổi tiền."}]},
+      {"id": 40, "type": "Biển báo an toàn (Safety Sign)", "question": "Question 40 (Exercise 12 - Question 2): What does this sign mean?", "hasCustomVisual": "no_pushing_sign", "options": [{"key": "A", "text": "You must push someone in this place."}, {"key": "B", "text": "Watch your steps."}, {"key": "C", "text": "It's very dangerous if you push someone in this place."}, {"key": "D", "text": "You cannot bring your dogs or cats into this place."}], "correct": "C", "trans": "Dịch: Biển báo dưới đây có ý nghĩa gì?", "analysis": [{"word": "You must push someone...", "badge": "phải xô đẩy ai đó", "badgeType": "wrong", "note": "= biển cấm mà lại bảo bắt buộc xô đẩy là sai trái"}, {"word": "Watch your steps", "badge": "chú ý bước chân", "badgeType": "wrong", "note": "= biển trơn trượt (slippery) mới là chú ý bước chân"}, {"word": "It's very dangerous if you push...", "badge": "rất nguy hiểm nếu xô đẩy người khác", "badgeType": "correct", "note": "= giải thích vì sao có biển cấm 'No Pushing in' (xô đẩy là hành vi cực kỳ nguy hiểm)"}, {"word": "You cannot bring your dogs...", "badge": "không mang chó mèo", "badgeType": "wrong", "note": "= hình người xô đẩy nhau, không có thú cưng"}], "whyCorrect": {"rule": "Ý nghĩa biển cấm xô đẩy (No Pushing in):", "content": "Biển báo tròn viền đỏ gạch chéo hình người đẩy nhau kèm chữ <b>No Pushing in</b> nhắc nhở không được chen lấn, xô đẩy vì có thể dẫn đến tai nạn: <span class='highlight-green-tag'>It's very dangerous if you push someone in this place</span>."}, "whyWrong": [{"word": "Option A", "reason": "ngược hoàn toàn với biển cấm."}, {"word": "Option B", "reason": "sai biển báo trượt ngã."}, {"word": "Option D", "reason": "không liên quan đến động vật nuôi."}]},
+      {"id": 41, "type": "Biển báo thông báo dịch vụ (Notice Sign)", "question": "Question 41 (Exercise 12 - Question 3): What does this sign mean?", "hasCustomVisual": "ring_bell_sign", "options": [{"key": "A", "text": "You have to ring the bell to ask for help."}, {"key": "B", "text": "The bell will ring when you come in."}, {"key": "C", "text": "The bell will ring when you go out."}, {"key": "D", "text": "The staff will ring the bell for you."}], "correct": "A", "trans": "Dịch: Biển thông báo dưới đây có ý nghĩa gì?", "analysis": [{"word": "You have to ring the bell...", "badge": "bấm chuông để yêu cầu giúp đỡ", "badgeType": "correct", "note": "= Ring bell for service = bấm chuông khi cần nhân viên phục vụ/hỗ trợ"}, {"word": "The bell will ring when you come in", "badge": "chuông tự kêu khi vào", "badgeType": "wrong", "note": "= đây là chuông bấm tay (nhấn ngón tay), không phải cảm biến tự động"}, {"word": "The bell will ring when you go out", "badge": "chuông kêu khi ra ngoài", "badgeType": "wrong", "note": "= sai"}, {"word": "The staff will ring...", "badge": "nhân viên bấm chuông", "badgeType": "wrong", "note": "= khách hàng bấm chuông gọi nhân viên chứ không phải nhân viên bấm cho khách"}], "whyCorrect": {"rule": "Ý nghĩa thông báo 'RING BELL FOR SERVICE':", "content": "Bảng thông báo ghi <b>NOTICE: RING BELL FOR SERVICE</b> (Thông báo: Rung/bấm chuông để được phục vụ) yêu cầu khách hàng bấm nút chuông khi cần hỗ trợ: <span class='highlight-green-tag'>You have to ring the bell to ask for help</span>."}, "whyWrong": [{"word": "Option B", "reason": "chuông bấm tay, không phải chuông cảm biến."}, {"word": "Option C", "reason": "không phải chuông báo cửa ra vào."}, {"word": "Option D", "reason": "người cần phục vụ bấm chuông chứ không phải nhân viên."}]},
+      {"id": 42, "type": "Biển báo cấm ăn uống (Prohibition Sign)", "question": "Question 42 (Exercise 12 - Question 4): What does this sign mean?", "hasCustomVisual": "no_food_drink_sign", "options": [{"key": "A", "text": "You must not take food or drinks out of this room."}, {"key": "B", "text": "You cannot have snacks in this room."}, {"key": "C", "text": "You can buy cheaper food here."}, {"key": "D", "text": "You must eat in this room."}], "correct": "B", "trans": "Dịch: Biển báo dưới đây có ý nghĩa gì?", "analysis": [{"word": "must not take food out", "badge": "không mang đồ ăn ra ngoài", "badgeType": "wrong", "note": "= biển cấm ăn uống bên trong khu vực này chứ không cấm mang ra"}, {"word": "cannot have snacks in this room", "badge": "không được ăn vặt trong phòng", "badgeType": "correct", "note": "= No food or drink in this area đồng nghĩa bạn không được ăn uống/ăn đồ ăn vặt ở đây"}, {"word": "buy cheaper food here", "badge": "mua đồ ăn rẻ hơn", "badgeType": "wrong", "note": "= đây không phải biển quảng cáo giảm giá"}, {"word": "You must eat in this room", "badge": "bắt buộc phải ăn trong phòng", "badgeType": "wrong", "note": "= ngược hoàn toàn với biển cấm"}], "whyCorrect": {"rule": "Ý nghĩa biển cấm ăn uống (No Food or Drink):", "content": "Biển báo tròn đỏ gạch chéo hình chiếc bánh và cốc nước kèm dòng chữ <b>NO FOOD OR DRINK IN THIS AREA</b> cấm mọi hành vi ăn uống trong phòng: <span class='highlight-green-tag'>You cannot have snacks in this room</span>."}, "whyWrong": [{"word": "Option A", "reason": "biển cấm ăn uống trong khu vực, không phải cấm mang ra."}, {"word": "Option C", "reason": "không phải biển bán đồ ăn."}, {"word": "Option D", "reason": "trái ngược hoàn toàn với lệnh cấm."}]},
+      {"id": 43, "type": "Biển báo cấm xe đạp (Traffic Sign)", "question": "Question 43 (Exercise 12 - Question 5): What does this sign mean?", "hasCustomVisual": "no_bicycles_sign", "options": [{"key": "A", "text": "Enter this street with your bike."}, {"key": "B", "text": "Do not ride your bike on this road."}, {"key": "C", "text": "Do not use a black bike to ride on this road."}, {"key": "D", "text": "Ride your bike on the pavements."}], "correct": "B", "trans": "Dịch: Biển báo dưới đây có ý nghĩa gì?", "analysis": [{"word": "Enter this street with your bike", "badge": "đi vào đường này bằng xe đạp", "badgeType": "wrong", "note": "= biển có gạch chéo đỏ là biển cấm, không cho phép đi vào"}, {"word": "Do not ride your bike on this road", "badge": "không đi xe đạp trên đường này", "badgeType": "correct", "note": "= cấm xe đạp lưu thông trên tuyến đường này"}, {"word": "Do not use a black bike...", "badge": "không đi xe đạp màu đen", "badgeType": "wrong", "note": "= hiểu sai màu sắc biểu tượng thành màu xe"}, {"word": "Ride your bike on the pavements", "badge": "đi xe đạp trên vỉa hè", "badgeType": "wrong", "note": "= biển không hướng dẫn đi lên vỉa hè"}], "whyCorrect": {"rule": "Ý nghĩa biển cấm xe đạp:", "content": "Biển báo giao thông hình tròn viền đỏ có gạch chéo qua hình chiếc xe đạp là biển báo cấm người đi xe đạp đi vào tuyến đường này: <span class='highlight-green-tag'>Do not ride your bike on this road</span>."}, "whyWrong": [{"word": "Option A", "reason": "ngược hoàn toàn với biển cấm."}, {"word": "Option C", "reason": "màu đen là quy ước vẽ biểu tượng, cấm mọi loại xe đạp không phân biệt màu sắc."}, {"word": "Option D", "reason": "vỉa hè dành cho người đi bộ."}]}
+    ];
+
+    const passagesData = {
+      "teens_guide": {
+        "title": "TEENS! GET FIT AND FEEL GREAT!",
+        "badge": "THÔNG BÁO / HƯỚNG DẪN (CÂU 1 - 4)",
+        "intro": "Read the following advertisement/announcement and mark the letter A, B, C, or D to indicate the correct option that best fits each of the numbered blanks:",
+        "content": "<div style=\"background: #F8FAFC; border-radius: 16px; padding: 20px 24px; border: 2px solid #E2E8F0; line-height: 1.85; font-size: 1.06rem; color: #2D3436;\"><div style=\"text-align: center; font-weight: 900; font-size: 1.35rem; color: #E17055; margin-bottom: 12px;\">📢 Teens! Get Fit and Feel Great! 📢</div><p style=\"margin-bottom: 12px;\">Want to be healthier and have more energy? Our special guide is just for teens! Learn how to <span class=\"passage-blank\">(1) ______</span> good choices and feel awesome every day.</p><div style=\"background: #FFF; border-radius: 12px; padding: 14px 18px; border: 1.5px solid #DFE6E9; margin-bottom: 12px;\"><div style=\"font-weight: 800; color: #0984E3; margin-bottom: 6px;\">What's Inside:</div><p><b>1. Get Moving:</b> If you <b>exercise</b> regularly, you'll get <span class=\"passage-blank\">(2) ______</span> and feel better.</p><p><b>2. Eat Right:</b> You <b>should</b> follow our <span class=\"passage-blank\">(3) ______</span> tips to eat healthy foods and avoid junk food.</p><p><b>3. Feel Happy:</b> Learn <span class=\"passage-blank\">(4) ______</span> to relax and stay positive.</p></div><div style=\"font-weight: 800; color: #00BA66; text-align: center;\">🎁 Bonus: Get the guide today and start your healthy journey!</div></div>"
+      },
+      "riverfront_market": {
+        "title": "WELCOME TO THE ANNUAL RIVERFRONT NIGHT MARKET!",
+        "badge": "THÔNG BÁO / SỰ KIỆN (CÂU 5 - 8)",
+        "intro": "Read the following announcement and mark the letter A, B, C, or D to indicate the correct option that best fits each of the numbered blanks:",
+        "content": "<div style=\"background: #F8FAFC; border-radius: 16px; padding: 20px 24px; border: 2px solid #E2E8F0; line-height: 1.85; font-size: 1.06rem; color: #2D3436;\"><div style=\"text-align: center; font-weight: 900; font-size: 1.35rem; color: #0984E3; margin-bottom: 12px;\">🏮 Welcome to the annual Riverfront Night Market! 🏮</div><p style=\"margin-bottom: 10px;\">This vibrant event showcases <span class=\"passage-blank\">(1) ______</span> best of our city's riverside charm. Join us along the riverbank for an evening filled with <span class=\"passage-blank\">(2) ______</span> street food, unique crafts, and live music.</p><p style=\"margin-bottom: 10px;\">Explore stalls offering handmade goods, enjoy <span class=\"passage-blank\">(3) ______</span> views, and immerse yourself <span class=\"passage-blank\">(4) ______</span> the lively atmosphere.</p><div style=\"font-weight: 800; color: #D63031; text-align: center; font-style: italic;\">✨ Riverfront Night Market - A feast for the senses! ✨</div></div>"
+      },
+      "ex9_time_mgmt": {
+        "title": "EXERCISE 9 - PASSAGE 1: STUDY-LIFE BALANCE & TIME MANAGEMENT",
+        "badge": "BÀI ĐIỀN TỪ ĐOẠN VĂN (CÂU 9 - 14)",
+        "intro": "Read the following passage and mark the letter A, B, C, or D to indicate the correct word that best fits each of the numbered blanks:",
+        "content": "<div style=\"background: #F8FAFC; border-radius: 16px; padding: 20px 24px; border: 2px solid #E2E8F0; line-height: 1.9; font-size: 1.06rem; text-align: justify; color: #2D3436;\"><p style=\"margin-bottom: 12px;\">❶ It's not easy to manage school and life, but with some good time <span class=\"passage-blank\">(1) ______</span> techniques, it's possible to achieve a study-life balance. Here are some tips for secondary-school students.</p><p style=\"margin-bottom: 12px;\">Firstly, <span class=\"passage-blank\">(2) ______</span> a schedule. Plan your week in advance, allocating specific times for studying, attending classes, and doing homework. You <span class=\"passage-blank\">(3) ______</span> also include breaks and time for relaxation or hobbies.</p><p style=\"margin-bottom: 12px;\">Secondly, learn to prioritise. You should identify the most important tasks and focus <span class=\"passage-blank\">(4) ______</span> those first. If necessary, you can delay less urgent activities until you've finished your important tasks. Remember that it's okay to say no sometimes if you feel overwhelmed.</p><p style=\"margin-bottom: 12px;\">Thirdly, take <span class=\"passage-blank\">(5) ______</span> of any free time during the day. For example, you can use long bus journeys to read or review notes. It is also advisable to get small tasks done during short breaks between classes.</p><p>Finally, don't be too hard on yourself if you can't do everything perfectly. It's normal to occasionally feel stressed out. In these situations, you can consider <span class=\"passage-blank\">(6) ______</span> to a teacher or school counsellor for support.</p></div>"
+      },
+      "ex9_teen_stress": {
+        "title": "EXERCISE 9 - PASSAGE 2: TEENAGERS & DEALING WITH STRESS",
+        "badge": "BÀI ĐIỀN TỪ ĐOẠN VĂN (CÂU 15 - 20)",
+        "intro": "Read the following passage and mark the letter A, B, C, or D to indicate the correct word that best fits each of the numbered blanks:",
+        "content": "<div style=\"background: #F8FAFC; border-radius: 16px; padding: 20px 24px; border: 2px solid #E2E8F0; line-height: 1.9; font-size: 1.06rem; text-align: justify; color: #2D3436;\"><p style=\"margin-bottom: 12px;\">❷ Teenagers today live in a very competitive world. It is more important than ever to succeed at school if you hope to <span class=\"passage-blank\">(1) ______</span> a chance in the job market afterwards. It’s no wonder that many young people worry <span class=\"passage-blank\">(2) ______</span> letting down their parents, their peers and themselves. To try to please everyone, they take on too many tasks until it becomes harder and harder to balance homework assignments, parties, sports activities and friends. The result is that young people <span class=\"passage-blank\">(3) ______</span> from stress.</p><p>There are different ways of dealing with stress. Everyone knows that caffeine, in the form of coffee or soft drinks, keeps you awake and alert. But caffeine is a drug which <span class=\"passage-blank\">(4) ______</span> become addictive. In the end, like other drugs, caffeine only leads to more stress. There are better ways to deal with stress: physical exercise is a good release for stress, <span class=\"passage-blank\">(5) ______</span> it increases certain chemicals in the brain which calm you down. You have to get enough sleep to avoid stress and to stay healthy and full of <span class=\"passage-blank\">(6) ______</span>.</p></div>"
+      },
+      "ex10_bau_truc": {
+        "title": "EXERCISE 10 - PASSAGE 1: BAU TRUC POTTERY VILLAGE",
+        "badge": "BÀI ĐỌC HIỂU (CÂU 21 - 25)",
+        "intro": "Read the following passage and mark the letter A, B, C, or D to indicate the correct answer to each of the questions:",
+        "content": "<div style=\"background: #F8FAFC; border-radius: 16px; padding: 20px 24px; border: 2px solid #E2E8F0; line-height: 1.9; font-size: 1.06rem; text-align: justify; color: #2D3436;\"><p style=\"margin-bottom: 12px;\">Bau Truc pottery items are made from clay from the Quao River mixed with sand. Clay is collected from the river only once a year, each lasting for half a month. Clay is taken more or less depending on the ability of each person. In the clay collecting season, local people try to take as much clay as they can to store, for use in the entire year.</p><p style=\"margin-bottom: 12px;\">Currently, people in Bau Truc pottery village still make pottery items in the traditional way. <b style=\"color: #D63031; background: #FFEAEA; padding: 2px 6px; border-radius: 6px;\">They</b> do not use the wheel but the craftsmen have to turn around the products. The potters shape their products by skillful hands and feet around a pole-round pillar, rather than on the wheel. From this step, <b style=\"color: #0984E3; background: #EBF3FA; padding: 2px 6px; border-radius: 6px;\">silky</b> clay block initially gradually forms a smooth rounded hollow blocks, then the formation of flower vases, or water pots.</p><p>Bau Truc's craftsmen use wet cloths to make the product surface smooth. These items are decorated with seashells, snails or hand-made paintings featuring the daily life of Bau Truc's people.</p></div>"
+      },
+      "ex10_big_city": {
+        "title": "EXERCISE 10 - PASSAGE 2: LIVING IN A BIG CITY",
+        "badge": "BÀI ĐỌC HIỂU (CÂU 26 - 30)",
+        "intro": "Read the following passage and mark the letter A, B, C, or D to indicate the correct answer to each of the questions:",
+        "content": "<div style=\"background: #F8FAFC; border-radius: 16px; padding: 20px 24px; border: 2px solid #E2E8F0; line-height: 1.9; font-size: 1.06rem; text-align: justify; color: #2D3436;\"><p style=\"margin-bottom: 12px;\">Do you live in a big city? It is said that living in big cities is expensive because of the high living cost. There are also pollution and traffic problems that make living in big cities unpleasant. However, many people enjoy living in big cities because they offer convenience and <b style=\"color: #00BA66; background: #E8F8F0; padding: 2px 6px; border-radius: 6px;\">countless</b> options for entertainment.</p><p style=\"margin-bottom: 12px;\">Many big cities already have good public transportation systems, which makes it easy for the citizens to go anywhere around the city. This also reduces and helps overcome the problem of traffic jams that often occur at peak times. With the convenience of public transportation, the citizens do not have to drive everywhere and can save money as they do not have to pay for parking charges.</p><p>Staying healthy is everybody's concern and in big cities you can find the best possible medical care for any diseases, especially the severe ones. Moreover, compared to rural areas, access to medical treatment is easier because there are always clinics or medical centers that open 24 hours in many parts of the city so you can get medical help anytime, as soon as you need it. Reaching hospitals is also easier as public transport is usually available 24 hours a day.</p></div>"
+      },
+      "ex11_london_tube": {
+        "title": "EXERCISE 11 - PASSAGE 1: THE LONDON UNDERGROUND (THE TUBE)",
+        "badge": "BÀI ĐIỀN CÂU VÀO ĐOẠN VĂN (CÂU 31 - 34)",
+        "intro": "Four phrases/sentences have been removed from the text below. Choose the correct answer to complete the text. Write only the letter A-D in each blank:",
+        "content": "<div style=\"background: #F8FAFC; border-radius: 16px; padding: 20px 24px; border: 2px solid #E2E8F0; line-height: 1.9; font-size: 1.06rem; text-align: justify; color: #2D3436;\"><p style=\"margin-bottom: 12px;\">❶ The London Underground, affectionately nicknamed “the Tube,” <span class=\"passage-blank\">[1] ______</span> , which resemble a maze for the strangers. Opened in 1863, <span class=\"passage-blank\">[2] ______</span> . With a network of 11 distinct lines and over 270 stations, the Tube serves as the lifeblood of the city, transporting millions of passengers daily across its vast expanse. <span class=\"passage-blank\">[3] ______</span> . Carefully studying detailed maps and understanding the nuances of different lines and travel zones are essential skills for navigating this network. <span class=\"passage-blank\">[4] ______</span> , the Tube is undeniably a convenient and efficient way to travel around London. It seamlessly connects major landmarks like Buckingham Palace and the Tower of London with bustling residential areas and key business districts. Whether you’re a seasoned commuter or a first-time visitor, the Tube offers a fascinating glimpse into the city’s intricate transportation network and weaves its way beneath the busy streets of London.</p><div style=\"margin-top: 14px; background: #FFF9E6; border: 1.5px dashed #FDCB6E; border-radius: 12px; padding: 12px 16px; font-weight: 700; line-height: 1.65;\"><div style=\"color: #D35400; margin-bottom: 6px;\">📋 Danh sách 4 cụm câu cần điền vào chỗ trống:</div><div><b>A.</b> Navigating the Tube requires a degree of skill and familiarity</div><div><b>B.</b> Despite its complexity</div><div><b>C.</b> is a complex and sprawling network of underground railway lines</div><div><b>D.</b> it holds the distinction of being the oldest underground railway system in the world</div></div></div>"
+      },
+      "ex11_nyc": {
+        "title": "EXERCISE 11 - PASSAGE 2: NEW YORK CITY - A MOSAIC OF CULTURES",
+        "badge": "BÀI ĐIỀN CÂU VÀO ĐOẠN VĂN (CÂU 35 - 38)",
+        "intro": "Four phrases/sentences have been removed from the text below. Choose the correct answer to complete the text. Write only the letter A-D in each blank:",
+        "content": "<div style=\"background: #F8FAFC; border-radius: 16px; padding: 20px 24px; border: 2px solid #E2E8F0; line-height: 1.9; font-size: 1.06rem; text-align: justify; color: #2D3436;\"><p style=\"margin-bottom: 12px;\">❷ New York City is a mix of cultures, <span class=\"passage-blank\">[1] ______</span> . This remarkable diversity is evident in the city’s unique neighborhoods, each with its own distinct character and traditions. <span class=\"passage-blank\">[2] ______</span> , which transports you to a world of authentic restaurants and charming bakeries lining the streets. The aromas of freshly baked bread and hot sauces fill the air, creating a sensory experience that evokes the heart of Italy. <span class=\"passage-blank\">[3] ______</span> , with its markets overflowing with exotic spices and delicious street food. Here, you can experience the rich cultural heritage of China through its sights, sounds, and flavors. Harlem, known as a center of African American culture, <span class=\"passage-blank\">[4] ______</span> . This incredible cultural richness contributes to the city’s dynamic energy and makes New York City a captivating place to explore, offering a unique blend of cultures and experiences that leave a lasting impression on visitors and residents.</p><div style=\"margin-top: 14px; background: #FFF9E6; border: 1.5px dashed #FDCB6E; border-radius: 12px; padding: 12px 16px; font-weight: 700; line-height: 1.65;\"><div style=\"color: #D35400; margin-bottom: 6px;\">📋 Danh sách 4 cụm câu cần điền vào chỗ trống:</div><div><b>A.</b> boasts a rich history and continues to be a hub for music and artistic expression</div><div><b>B.</b> with people from over 200 countries represented within its diverse population</div><div><b>C.</b> In contrast, bustling Chinatown transports you to another world</div><div><b>D.</b> Little Italy offers a taste of Italy</div></div></div>"
+      }
+    };
+
+    const userAnswers = {};
+
+    function togglePassageView(qId) {
+      const el = document.getElementById('collapse_pass_' + qId);
+      const btn = document.getElementById('btn_toggle_' + qId);
+      if (el) {
+        if (el.style.display === 'block') {
+          el.style.display = 'none';
+          if (btn) btn.innerHTML = '📖 Xem lại đoạn văn bài đọc';
+        } else {
+          el.style.display = 'block';
+          if (btn) btn.innerHTML = '▲ Thu gọn đoạn văn bài đọc';
+        }
+      }
+    }
+
+    function renderQuiz() {
+      const container = document.getElementById('quizContainer');
+      container.innerHTML = '';
+
+      quizData.forEach((q) => {
+        if (q.is_first_in_passage && passagesData[q.is_first_in_passage]) {
+          const pass = passagesData[q.is_first_in_passage];
+          const passCard = document.createElement('div');
+          passCard.className = 'reading-passage-card';
+          passCard.id = 'passage_anchor_' + q.is_first_in_passage;
+          passCard.innerHTML = `
+            <div class="passage-header-top">
+              <div class="passage-title-badge">
+                <span>📖</span>
+                <span>${pass.title}</span>
+              </div>
+              <span class="passage-scope-badge">${pass.badge}</span>
+            </div>
+            <div class="passage-intro-text">
+              📌 ${pass.intro}
+            </div>
+            ${pass.content}
+            <div class="passage-prompt-banner">
+              <span>👉</span>
+              <span>Đọc kỹ đoạn văn phía trên và lần lượt chọn đáp án cho các câu hỏi theo thứ tự bên dưới:</span>
+            </div>
+          `;
+          container.appendChild(passCard);
+        }
+
+        const card = document.createElement('div');
+        card.className = 'quiz-card';
+        card.id = `qCard_${q.id}`;
+
+        let visualHtml = '';
+        if (q.hasCustomVisual === 'cash_only_sign') {
+          visualHtml = `
+            <div class="visual-wrapper">
+              <div style="width: 240px; background: #FFF5F5; border: 3px solid #E84118; border-radius: 14px; padding: 14px; text-align: center; box-shadow: 0 8px 18px rgba(232, 65, 24, 0.2);">
+                <div style="font-size: 1.5rem; font-weight: 900; color: #E84118; letter-spacing: 1px; border: 2px dashed #E84118; padding: 6px; border-radius: 8px; margin-bottom: 6px;">💵 Cash Only</div>
+                <div style="font-size: 0.9rem; font-weight: 800; color: #2D3436;">THANK YOU</div>
+              </div>
+            </div>
+          `;
+        } else if (q.hasCustomVisual === 'no_pushing_sign') {
+          visualHtml = `
+            <div class="visual-wrapper">
+              <div style="width: 140px; height: 160px; background: #FFF; border: 2.5px solid #2D3436; border-radius: 14px; padding: 8px; display: flex; flex-direction: column; align-items: center; justify-content: center; box-shadow: 0 6px 16px rgba(0,0,0,0.12);">
+                <div class="traffic-sign-box" style="width: 100px; height: 100px; border-width: 9px;">
+                  <div style="font-size: 1.8rem; z-index: 1;">🤼</div>
+                </div>
+                <div style="background: #E84118; color: #FFF; font-weight: 900; font-size: 0.75rem; padding: 3px 8px; border-radius: 6px; margin-top: 6px; text-align: center;">No Pushing in</div>
+              </div>
+            </div>
+          `;
+        } else if (q.hasCustomVisual === 'ring_bell_sign') {
+          visualHtml = `
+            <div class="visual-wrapper">
+              <div class="notice-plate-sign">
+                <div class="notice-plate-header">NOTICE</div>
+                <div class="notice-plate-body">
+                  <span>RING BELL FOR SERVICE</span>
+                  <span style="font-size: 1.6rem;">🔔👆</span>
+                </div>
+              </div>
+            </div>
+          `;
+        } else if (q.hasCustomVisual === 'no_food_drink_sign') {
+          visualHtml = `
+            <div class="visual-wrapper">
+              <div style="width: 180px; background: #FFF; border: 2.5px solid #2D3436; border-radius: 14px; padding: 10px; display: flex; flex-direction: column; align-items: center; box-shadow: 0 6px 16px rgba(0,0,0,0.12);">
+                <div class="traffic-sign-box" style="width: 110px; height: 110px; border-width: 10px;">
+                  <div style="font-size: 1.8rem; z-index: 1; display:flex; gap: 4px;"><span>🍔</span><span>🥤</span></div>
+                </div>
+                <div style="font-weight: 900; font-size: 0.72rem; color: #2D3436; margin-top: 8px; text-align: center; line-height: 1.2;">NO FOOD OR DRINK<br>IN THIS AREA</div>
+              </div>
+            </div>
+          `;
+        } else if (q.hasCustomVisual === 'no_bicycles_sign') {
+          visualHtml = `
+            <div class="visual-wrapper">
+              <div style="width: 150px; height: 150px; background: #FFF; border: 3px solid #2D3436; border-radius: 16px; padding: 8px; display: flex; align-items: center; justify-content: center; box-shadow: 0 6px 16px rgba(0,0,0,0.12);">
+                <div class="traffic-sign-box" style="width: 120px; height: 120px; border-width: 10px;">
+                  <div style="font-size: 2.2rem; z-index: 1;">🚲</div>
+                </div>
+              </div>
+            </div>
+          `;
+        }
+
+        let quickPassageHtml = '';
+        if (q.passage_key && passagesData[q.passage_key]) {
+          quickPassageHtml = `
+            <div>
+              <button class="btn-toggle-passage" id="btn_toggle_${q.id}" onclick="togglePassageView(${q.id})">
+                📖 Xem lại đoạn văn bài đọc
+              </button>
+              <div class="collapse-passage-box" id="collapse_pass_${q.id}">
+                <div style="font-weight:900; color:#D35400; margin-bottom:8px;">📖 ${passagesData[q.passage_key].title}:</div>
+                ${passagesData[q.passage_key].content}
+              </div>
+            </div>
+          `;
+        }
+
+        let optionsHtml = '';
+        q.options.forEach(opt => {
+          optionsHtml += `
+            <button class="option-btn" id="opt_${q.id}_${opt.key}" onclick="handleSelect(${q.id}, '${opt.key}')">
+              <span class="opt-key">${opt.key}</span>
+              <span class="opt-text">${opt.text}</span>
+            </button>
+          `;
+        });
+
+        let cardsHtml = '';
+        q.analysis.forEach(item => {
+          const isCorrect = item.badgeType === 'correct';
+          cardsHtml += `
+            <div class="exp-card-item">
+              <div class="exp-card-header">
+                <span class="card-word ${isCorrect ? 'word-correct' : 'word-wrong'}">${item.word}</span>
+                <span class="badge-pill ${isCorrect ? 'badge-pill-correct' : 'badge-pill-wrong'}">${item.badge}</span>
+              </div>
+              <div class="card-meaning">${item.note}</div>
+            </div>
+          `;
+        });
+
+        let whyWrongHtml = '';
+        q.whyWrong.forEach(item => {
+          whyWrongHtml += `
+            <div style="margin-bottom: 6px;">
+              <span class="wrong-key-pill">${item.word}</span> – ${item.reason}
+            </div>
+          `;
+        });
+
+        card.innerHTML = `
+          <div class="card-top">
+            <span class="q-number-pill">Câu ${q.id} / 43</span>
+            <span class="q-tag-pill">${q.type}</span>
+          </div>
+          <div class="q-text">
+            ${q.question}
+            ${q.subtext ? `<div style="margin-top: 8px; color: #333; background: #F8F9FA; padding: 10px 14px; border-radius: 12px; border-left: 4px solid #0984E3;">${q.subtext}</div>` : ''}
+          </div>
+          ${visualHtml}
+          ${quickPassageHtml}
+          <div class="options-grid ${q.options.length === 4 ? 'grid-2col' : ''}">
+            ${optionsHtml}
+          </div>
+
+          <!-- Explanation Container -->
+          <div class="explanation-container" id="exp_${q.id}">
+            <div class="exp-title-row">
+              <span>⚡ GIẢI THÍCH CHI TIẾT</span>
+            </div>
+
+            <!-- Translation bubble -->
+            <div class="exp-trans-box">
+              <span style="font-size: 1.2rem;">💬</span>
+              <div>${q.trans}</div>
+            </div>
+
+            <!-- 1. Phân tích 4 đáp án -->
+            <div class="exp-section-title">
+              <span>1. Phân tích 4 đáp án:</span>
+            </div>
+            <div class="exp-grid-cards">
+              ${cardsHtml}
+            </div>
+
+            <!-- 2. Tại sao đúng? -->
+            <div class="exp-block">
+              <div style="font-weight: 900; color: #00BA66; margin-bottom: 4px; display: flex; align-items: center; gap: 6px; flex-wrap: wrap;">
+                <span>2. ✅ TẠI SAO ĐÚNG?</span>
+                <span class="rule-tag">${q.whyCorrect.rule}</span>
+              </div>
+              <div style="color: #2D3436; padding-left: 22px;">
+                ${q.whyCorrect.content}
+              </div>
+            </div>
+
+            <!-- 3. Tại sao sai? -->
+            <div class="exp-block" style="margin-bottom: 0;">
+              <div style="font-weight: 900; color: #FF4757; margin-bottom: 4px;">
+                <span>3. ❌ TẠI SAO SAI?</span>
+              </div>
+              <div style="color: #4A4A4A; padding-left: 22px;">
+                ${whyWrongHtml}
+              </div>
+            </div>
+          </div>
+        `;
+
+        container.appendChild(card);
+      });
+    }
+
+    function handleSelect(questionId, selectedKey) {
+      const q = quizData.find(item => item.id === questionId);
+      if (!q) return;
+
+      userAnswers[questionId] = selectedKey;
+      const isCorrect = selectedKey === q.correct;
+
+      q.options.forEach(opt => {
+        const btn = document.getElementById(`opt_${q.id}_${opt.key}`);
+        if (!btn) return;
+        btn.classList.remove('selected-correct', 'selected-wrong', 'show-truth');
+
+        if (opt.key === selectedKey) {
+          if (isCorrect) {
+            btn.classList.add('selected-correct');
+          } else {
+            btn.classList.add('selected-wrong');
+          }
+        } else if (opt.key === q.correct) {
+          btn.classList.add('show-truth');
+        }
+      });
+
+      if (isCorrect) {
+        playDing();
+        triggerConfetti(45);
+      } else {
+        playWrongSound();
+      }
+
+      const expBox = document.getElementById(`exp_${q.id}`);
+      if (expBox) {
+        expBox.style.display = 'block';
+      }
+
+      updateTopStats();
+    }
+
+    function updateTopStats() {
+      let correct = 0;
+      let totalAnswered = 0;
+
+      quizData.forEach(q => {
+        if (userAnswers[q.id] !== undefined) {
+          totalAnswered++;
+          if (userAnswers[q.id] === q.correct) {
+            correct++;
+          }
+        }
+      });
+
+      document.getElementById('correctScore').textContent = correct;
+      document.getElementById('answeredCount').textContent = totalAnswered;
+
+      const pct = (totalAnswered / quizData.length) * 100;
+      document.getElementById('progressBar').style.width = `${pct}%`;
+    }
+
+    function calculateAndShowResult() {
+      let correct = 0;
+      const total = quizData.length;
+
+      quizData.forEach(q => {
+        if (userAnswers[q.id] === q.correct) {
+          correct++;
+        }
+      });
+
+      const percentage = Math.round((correct / total) * 100);
+
+      document.getElementById('modalPercent').textContent = `${percentage}%`;
+      document.getElementById('modalFraction').textContent = `Đúng ${correct} / ${total} câu`;
+
+      const teacherQuoteEl = document.getElementById('modalTeacherQuote');
+      const trophyEl = document.getElementById('modalTrophy');
+
+      if (percentage < 50) {
+        trophyEl.textContent = '🌱';
+        teacherQuoteEl.textContent = '“Điểm lần này chưa cao lắm, con cố gắng đọc kỹ giải thích đáp án và làm lại nha. Cô tin con sẽ làm tốt hơn ở lần sau!”';
+      } else if (percentage >= 50 && percentage < 90) {
+        trophyEl.textContent = '🌟';
+        teacherQuoteEl.textContent = '“Con đã có tiến bộ khá ổn rồi, con cố gắng đọc kỹ giải thích đáp án và làm lại nha. Cô tin con sẽ làm tốt hơn ở lần sau!”';
+      } else {
+        trophyEl.textContent = '🏆';
+        teacherQuoteEl.textContent = '“Làm tốt lắm, con cố gắng ring điểm 10 ở lần sau nha!”';
+        triggerConfetti(120);
+      }
+
+      document.getElementById('scoreModal').classList.add('active');
+    }
+
+    function closeModal() {
+      document.getElementById('scoreModal').classList.remove('active');
+    }
+
+    function restartQuiz() {
+      for (const k in userAnswers) {
+        delete userAnswers[k];
+      }
+      closeModal();
+      renderQuiz();
+      updateTopStats();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function initAppNow() {
+      initBackgroundElements();
+      renderQuiz();
+      updateTopStats();
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initAppNow);
+    } else {
+      initAppNow();
+    }
+  </script>
+</body>
+</html>
